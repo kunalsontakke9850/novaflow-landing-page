@@ -1,0 +1,29 @@
+{
+  "name": "NovaFlow",
+  "short_name": "NovaFlow",
+  "description": "Frontend-only concept for an AI productivity workspace. No product services are connected.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#151622",
+  "theme_color": "#151622",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "business", "utilities"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "View pricing concept",
+      "short_name": "Pricing",
+      "description": "Explore illustrative pricing on the NovaFlow concept page",
+      "url": "/#pricing",
+      "icons": [{ "src": "/favicon.svg", "sizes": "32x32" }]
+    }
+  ]
+}
