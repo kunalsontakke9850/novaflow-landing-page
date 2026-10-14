@@ -110,7 +110,7 @@ export function Pricing() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-12"
+          className="mx-auto mb-10 max-w-3xl text-center md:mb-12"
         >
           <Badge variant="info" size="sm" className="mb-4">
             Example pricing
@@ -160,7 +160,7 @@ export function Pricing() {
         </motion.div>
 
         {/* Plans Grid */}
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="mx-auto grid max-w-6xl gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
           {plans.map((plan, index) => (
             <motion.div
               key={plan.name}

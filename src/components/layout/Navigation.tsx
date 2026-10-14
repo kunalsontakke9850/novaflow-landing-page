@@ -39,13 +39,13 @@ export function Navigation() {
       role="banner"
     >
       <nav className="container" aria-label="Main navigation">
-        <div className="flex h-16 items-center justify-between md:h-20">
+        <div className="flex h-16 items-center justify-between md:h-[4.5rem]">
           {/* Logo */}
           <Link
             to="hero"
             smooth={true}
             duration={500}
-            className="flex items-center gap-2 text-navy-50 font-display font-bold text-xl"
+            className="flex shrink-0 items-center gap-2 font-display text-xl font-bold text-navy-50"
             aria-label="NovaFlow Home"
           >
             <svg
@@ -70,8 +70,8 @@ export function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden items-center gap-5 lg:flex xl:gap-8">
-            <div className="flex items-center gap-4 xl:gap-6">
+          <div className="hidden items-center gap-4 lg:flex xl:gap-7">
+            <div className="flex items-center gap-3 xl:gap-5">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -79,7 +79,7 @@ export function Navigation() {
                   smooth={true}
                   duration={500}
                   offset={-80}
-                  className="text-sm font-medium text-navy-300 transition-colors duration-200 hover:text-navy-50"
+                  className="rounded-md px-1 py-2 text-sm font-medium text-navy-300 transition-colors duration-200 hover:text-navy-50 focus-visible:outline"
                 >
                   {link.label}
                 </Link>
@@ -122,7 +122,7 @@ export function Navigation() {
           role="navigation"
           aria-label="Mobile navigation"
         >
-          <div className="py-4 space-y-2 border-t border-white/5">
+          <div className="space-y-2 border-t border-white/5 py-4">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -131,13 +131,13 @@ export function Navigation() {
                 duration={500}
                 offset={-80}
                 spy={true}
-                className="block rounded-lg px-2 py-3 text-base font-medium text-navy-300 transition-colors hover:text-navy-50"
+                className="block min-h-11 rounded-lg px-3 py-3 text-base font-medium text-navy-200 transition-colors hover:bg-white/5 hover:text-navy-50"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}
               </Link>
             ))}
-            <div className="space-y-3 border-t border-white/5 pt-4">
+            <div className="border-t border-white/5 pt-4">
               <Link
                 to="product-showcase"
                 smooth={true}

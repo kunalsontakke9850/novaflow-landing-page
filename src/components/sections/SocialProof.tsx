@@ -49,7 +49,7 @@ export function SocialProof() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="mx-auto mb-12 max-w-3xl text-center md:mb-16"
         >
           <Badge variant="info" size="sm" className="mb-4">
             The idea behind NovaFlow
@@ -68,16 +68,16 @@ export function SocialProof() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="mb-20"
+          className="mb-14 md:mb-18"
         >
-          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-60 hover:opacity-100 transition-opacity duration-500">
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 md:gap-6">
             {audienceTypes.map((company, index) => (
               <motion.div
                 key={company.name}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.1 + index * 0.05 }}
-                className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white/5 border border-white/5 hover:border-white/10 transition-colors group"
+                className="group flex items-center gap-3 rounded-xl border border-white/8 bg-white/[0.035] px-3 py-2 transition-colors hover:border-white/15 sm:px-4"
               >
                 <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-violet-500/20 to-blue-500/20 flex items-center justify-center group-hover:from-violet-500/30 group-hover:to-blue-500/30 transition-colors">
                   <company.icon className="w-5 h-5 text-violet-400" />
@@ -94,7 +94,7 @@ export function SocialProof() {
         </motion.div>
 
         {/* Concept highlights */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
           {benefits.map((benefit, index) => (
             <motion.div
               key={benefit.title}

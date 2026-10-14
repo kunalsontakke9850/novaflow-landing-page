@@ -83,7 +83,7 @@ export function Features() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="mx-auto mb-12 max-w-3xl text-center md:mb-16"
         >
           <Badge variant="info" size="sm" className="mb-4">
             Product concept
@@ -97,7 +97,7 @@ export function Features() {
         </motion.div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -117,7 +117,7 @@ export function Features() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center mt-16"
+          className="mt-12 text-center md:mt-16"
         >
           <Link to="how-it-works" smooth duration={500} offset={-80} className="btn btn-secondary btn-lg gap-3">
             Explore the workflow

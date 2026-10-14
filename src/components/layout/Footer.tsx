@@ -29,10 +29,10 @@ export function Footer() {
 
   return (
     <footer className="bg-navy-950 border-t border-white/5" role="contentinfo">
-      <div className="container py-16 md:py-24">
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-8 md:gap-12 mb-12 md:mb-16">
+      <div className="container py-14 md:py-18">
+        <div className="mb-12 grid grid-cols-2 gap-x-6 gap-y-10 md:mb-16 md:grid-cols-2 md:gap-x-10 lg:grid-cols-6 lg:gap-8">
           {/* Brand */}
-          <div className="col-span-2 md:col-span-1">
+          <div className="col-span-2 lg:col-span-2">
             <Link
               to="hero"
               smooth={true}
@@ -154,7 +154,7 @@ export function Footer() {
         <div className="border-t border-white/5 mb-8" />
 
         {/* Bottom bar */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="flex flex-col items-center justify-between gap-4 text-center md:flex-row md:text-left">
           {/* Copyright */}
           <p className="text-navy-500 text-sm">
             © {currentYear} NovaFlow. All rights reserved.
@@ -163,7 +163,7 @@ export function Footer() {
           </p>
 
           {/* Links */}
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 md:justify-end">
             <Link to="cta" smooth={true} duration={500} offset={-80} className="text-navy-500 hover:text-navy-300 text-sm transition-colors">
               Demo limitations
             </Link>

@@ -90,7 +90,7 @@ export function HowItWorks() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="mx-auto mb-12 max-w-3xl text-center md:mb-16"
         >
           <Badge variant="info" size="sm" className="mb-4">
             How the concept fits together
@@ -108,7 +108,7 @@ export function HowItWorks() {
           {/* Connecting line */}
           <div className="hidden lg:block absolute top-14 left-1/2 -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-violet-500/30 via-blue-500/30 to-emerald-500/30" aria-hidden="true" />
 
-          <div className="grid md:grid-cols-3 gap-8 relative z-10">
+          <div className="relative z-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
             {steps.map((step, index) => (
               <motion.div
                 key={step.number}
@@ -130,7 +130,7 @@ export function HowItWorks() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-20"
+          className="mt-14 md:mt-20"
         >
           <div className="text-center mb-8">
             <h3 className="heading-md mb-2">Designed to fit your toolkit</h3>
@@ -159,7 +159,7 @@ export function HowItWorks() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center mt-16"
+          className="mt-12 text-center md:mt-16"
         >
           <Link to="pricing" smooth duration={500} offset={-80} className="btn btn-primary btn-lg gap-3">
             View pricing concept

@@ -21,9 +21,9 @@ export function Hero() {
       {/* Background Effects */}
       <div className="absolute inset-0" aria-hidden="true">
         {/* Radial gradients */}
-        <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-violet-500/10 rounded-full blur-3xl animate-pulse-soft" />
-        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-3xl animate-pulse-soft" style={{ animationDelay: '1.5s' }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-violet-500/5 rounded-full blur-3xl animate-float" />
+        <div className="absolute top-1/4 left-1/4 h-[500px] w-[500px] rounded-full bg-violet-500/7 blur-3xl animate-pulse-soft" />
+        <div className="absolute bottom-1/4 right-1/4 h-[420px] w-[420px] rounded-full bg-blue-500/7 blur-3xl animate-pulse-soft" style={{ animationDelay: '1.5s' }} />
+        <div className="absolute top-1/2 left-1/2 h-[360px] w-[360px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-500/4 blur-3xl animate-float" />
 
         {/* Grid pattern */}
         <div className="absolute inset-0 opacity-5" style={{
@@ -150,20 +150,20 @@ function DashboardPreview() {
   const chartData = [45, 52, 48, 61, 55, 67, 72, 69, 78, 82, 79, 88];
 
   return (
-    <div className="relative">
+      <div className="relative min-w-0">
       {/* Glow effect */}
       <div className="absolute -inset-4 bg-gradient-to-r from-violet-500/10 to-blue-500/10 rounded-3xl blur-2xl opacity-50" aria-hidden="true" />
 
       <div className="relative glass-strong rounded-2xl overflow-hidden border border-white/10 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)]">
         {/* Header bar */}
-        <div className="flex items-center gap-2 px-4 py-3 bg-navy-950/50 border-b border-white/5">
-          <div className="flex gap-1.5">
+        <div className="flex min-w-0 items-center gap-2 border-b border-white/5 bg-navy-950/50 px-3 py-3 sm:px-4">
+          <div className="flex shrink-0 gap-1.5">
             <div className="w-3 h-3 rounded-full bg-rose-500" />
             <div className="w-3 h-3 rounded-full bg-amber-500" />
             <div className="w-3 h-3 rounded-full bg-emerald-500" />
           </div>
-          <div className="flex-1 text-center text-xs text-navy-400 font-mono">NovaFlow Dashboard — Sample data</div>
-          <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center">
+          <div className="min-w-0 flex-1 truncate px-1 text-center font-mono text-xs text-navy-300">NovaFlow Dashboard — Sample data</div>
+          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/5">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-navy-400">
               <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
               <path d="M12 6v6l4 2" />
@@ -171,17 +171,17 @@ function DashboardPreview() {
           </div>
         </div>
 
-        <div className="p-4 md:p-6 space-y-4 md:space-y-6">
+        <div className="min-w-0 space-y-4 p-3 sm:p-4 md:space-y-5 md:p-6">
           {/* Top Row: Project Progress + Quick Stats */}
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid min-w-0 gap-4 xl:grid-cols-3">
             {/* Project Progress */}
-            <Card variant="default" padding="md" className="md:col-span-2">
-              <div className="flex items-start justify-between mb-4">
-                <div>
+            <Card variant="default" padding="md" className="min-w-0 xl:col-span-2">
+              <div className="mb-4 flex min-w-0 flex-wrap items-start justify-between gap-2">
+                <div className="min-w-0">
                   <h4 className="font-semibold text-navy-50">Project Progress</h4>
                   <p className="text-navy-400 text-sm mt-0.5">Overall completion across all workstreams</p>
                 </div>
-                <Badge variant="info" size="sm">Illustrative data</Badge>
+                <Badge variant="info" size="sm" className="shrink-0">Illustrative data</Badge>
               </div>
 
               {/* Progress bars */}
@@ -214,13 +214,13 @@ function DashboardPreview() {
             </Card>
 
             {/* Quick Stats */}
-            <div className="space-y-3">
+            <div className="grid min-w-0 grid-cols-1 gap-3 sm:grid-cols-3 xl:grid-cols-1">
               {[
                 { label: 'Active Tasks', value: '12', icon: CheckCircle, color: 'violet', trend: '+3 this week' },
                 { label: 'Team Velocity', value: '87 pts', icon: Zap, color: 'blue', trend: '+12% vs last sprint' },
                 { label: 'Blockers', value: '2', icon: Shield, color: 'amber', trend: '1 resolved today' },
               ].map((stat) => (
-                <Card key={stat.label} variant="default" padding="md" className="text-center">
+                <Card key={stat.label} variant="default" padding="md" className="min-w-0 text-center">
                   <div className="flex items-center justify-center gap-2 mb-2">
                     <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-violet-500/20 to-blue-500/20 flex items-center justify-center">
                       <stat.icon className="w-4 h-4 text-violet-400" />
@@ -235,12 +235,12 @@ function DashboardPreview() {
           </div>
 
           {/* Bottom Row: Task Board + Activity */}
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="grid min-w-0 gap-4 xl:grid-cols-2">
             {/* Task Board */}
             <Card variant="default" padding="none" className="overflow-hidden">
-              <div className="px-4 py-3 border-b border-white/5 flex items-center justify-between">
+              <div className="flex items-center justify-between gap-3 border-b border-white/5 px-4 py-3">
                 <h4 className="font-semibold text-navy-50">Task Board</h4>
-                <Badge variant="default" size="sm">12 tasks</Badge>
+                <Badge variant="default" size="sm" className="shrink-0">12 tasks</Badge>
               </div>
               <div className="p-4">
                 <div className="space-y-3">
@@ -250,7 +250,7 @@ function DashboardPreview() {
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.3, delay: 0.6 + tasks.indexOf(task) * 0.05 }}
-                      className="flex items-center gap-3 p-3 rounded-xl bg-navy-900/50 border border-white/5 hover:border-white/10 transition-colors group"
+                      className="flex min-w-0 items-center gap-2 rounded-xl border border-white/5 bg-navy-900/50 p-2.5 transition-colors group hover:border-white/10 sm:gap-3 sm:p-3"
                     >
                       <div className="w-2 h-2 rounded-full flex-shrink-0"
                         style={{
@@ -258,11 +258,12 @@ function DashboardPreview() {
                         }}
                       />
                       <div className="flex-1 min-w-0">
-                        <div className="flex items-center gap-2">
-                          <span className="font-medium text-navy-100 truncate">{task.title}</span>
+                        <div className="flex min-w-0 items-start gap-2">
+                          <span className="min-w-0 flex-1 truncate font-medium text-navy-100">{task.title}</span>
                           <Badge
                             variant={task.status === 'done' ? 'success' : task.status === 'in-progress' ? 'info' : task.status === 'review' ? 'warning' : 'default'}
                             size="sm"
+                            className="shrink-0"
                           >
                             {task.status.replace('-', ' ')}
                           </Badge>
@@ -284,7 +285,7 @@ function DashboardPreview() {
                           </span>
                         </div>
                       </div>
-                      <div className="w-16 h-2 bg-navy-800 rounded-full overflow-hidden flex-shrink-0">
+                      <div className="hidden h-2 w-16 flex-shrink-0 overflow-hidden rounded-full bg-navy-800 sm:block">
                         <motion.div
                           initial={{ width: 0 }}
                           animate={{ width: `${task.progress}%` }}
@@ -300,7 +301,7 @@ function DashboardPreview() {
 
             {/* Activity Feed */}
             <Card variant="default" padding="none" className="overflow-hidden">
-              <div className="px-4 py-3 border-b border-white/5 flex items-center justify-between">
+              <div className="flex items-center justify-between gap-3 border-b border-white/5 px-4 py-3">
                 <h4 className="font-semibold text-navy-50">Recent Activity</h4>
                 <Badge variant="info" size="sm">Sample</Badge>
               </div>
@@ -336,9 +337,9 @@ function DashboardPreview() {
 
           {/* Mini Chart */}
           <Card variant="default" padding="md" className="md:col-span-2">
-            <div className="flex items-center justify-between mb-4">
+            <div className="flex min-w-0 items-center justify-between gap-3 mb-4">
               <h4 className="font-semibold text-navy-50">Velocity Trend</h4>
-              <Badge variant="default" size="sm">Last 12 sprints</Badge>
+              <Badge variant="default" size="sm" className="shrink-0">Last 12 sprints</Badge>
             </div>
             <div className="h-32 relative">
               <svg viewBox="0 0 300 128" className="w-full h-full" aria-label="Velocity trend chart showing upward trajectory over 12 sprints">

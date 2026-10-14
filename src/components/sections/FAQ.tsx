@@ -60,7 +60,7 @@ export function FAQ() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="mx-auto mb-12 max-w-3xl text-center md:mb-16"
         >
           <Badge variant="info" size="sm" className="mb-4">
             Common questions
@@ -96,7 +96,7 @@ export function FAQ() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center mt-16"
+          className="mt-12 text-center md:mt-16"
         >
           <Card variant="outlined" padding="lg" className="max-w-xl mx-auto">
             <h3 className="text-lg font-semibold text-navy-50 mb-2">A portfolio concept, built in the open</h3>
