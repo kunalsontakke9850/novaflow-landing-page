@@ -21,6 +21,27 @@ describe('ProductShowcase', () => {
 
     expect(listTab).toHaveAttribute('aria-selected', 'true');
     expect(screen.getByRole('tabpanel')).toBeInTheDocument();
+    expect(screen.getByRole('region', { name: /scrollable task table/i })).toBeInTheDocument();
+  });
+
+  it('switches dashboard tabs with arrow and Home/End keys', () => {
+    render(<ProductShowcase />);
+
+    const boardTab = screen.getByRole('tab', { name: 'Board' });
+    const listTab = screen.getByRole('tab', { name: 'List' });
+    const timelineTab = screen.getByRole('tab', { name: 'Timeline' });
+
+    fireEvent.keyDown(boardTab, { key: 'ArrowRight' });
+    expect(listTab).toHaveAttribute('aria-selected', 'true');
+    expect(listTab).toHaveFocus();
+
+    fireEvent.keyDown(listTab, { key: 'End' });
+    expect(timelineTab).toHaveAttribute('aria-selected', 'true');
+    expect(timelineTab).toHaveFocus();
+
+    fireEvent.keyDown(timelineTab, { key: 'ArrowRight' });
+    expect(boardTab).toHaveAttribute('aria-selected', 'true');
+    expect(boardTab).toHaveFocus();
   });
 
   it('makes unavailable task creation controls visibly disabled', () => {

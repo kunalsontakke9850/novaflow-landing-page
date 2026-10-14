@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, type KeyboardEvent } from 'react';
 import { motion } from 'framer-motion';
 import {
   LayoutDashboard,
@@ -53,6 +53,34 @@ export function ProductShowcase() {
 function DashboardPreview() {
   const [activeView, setActiveView] = useState<'board' | 'list' | 'timeline'>('board');
   const [filter, setFilter] = useState<'all' | 'active' | 'completed'>('all');
+  const viewIds = ['board', 'list', 'timeline'] as const;
+
+  const handleViewKeyDown = (event: KeyboardEvent<HTMLButtonElement>) => {
+    const currentIndex = viewIds.findIndex((view) => `view-tab-${view}` === event.currentTarget.id);
+    let nextIndex: number | undefined;
+
+    switch (event.key) {
+      case 'ArrowRight':
+        nextIndex = (currentIndex + 1) % viewIds.length;
+        break;
+      case 'ArrowLeft':
+        nextIndex = (currentIndex - 1 + viewIds.length) % viewIds.length;
+        break;
+      case 'Home':
+        nextIndex = 0;
+        break;
+      case 'End':
+        nextIndex = viewIds.length - 1;
+        break;
+      default:
+        return;
+    }
+
+    event.preventDefault();
+    const nextView = viewIds[nextIndex];
+    setActiveView(nextView);
+    document.getElementById(`view-tab-${nextView}`)?.focus();
+  };
 
   const tasks: Task[] = [
     {
@@ -188,6 +216,7 @@ function DashboardPreview() {
                   aria-selected={activeView === view.id}
                   tabIndex={activeView === view.id ? 0 : -1}
                   onClick={() => setActiveView(view.id as typeof activeView)}
+                  onKeyDown={handleViewKeyDown}
                   className={`flex min-h-10 min-w-10 items-center justify-center gap-1.5 rounded-md px-2 py-1.5 text-sm font-medium transition-all sm:px-3 ${
                     activeView === view.id
                       ? 'bg-white/10 text-navy-50 shadow-sm'
