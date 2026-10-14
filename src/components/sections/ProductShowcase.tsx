@@ -32,7 +32,7 @@ export function ProductShowcase() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-12"
         >
-          <Badge variant="info" size="sm" className="mb-4">
+          <Badge variant="default" size="sm" className="mb-4">
             Interactive frontend preview · synthetic data
           </Badge>
           <h2 id="showcase-heading" className="heading-lg mb-4">
@@ -88,7 +88,7 @@ function DashboardPreview() {
       title: 'Redesign onboarding flow',
       status: 'in-progress',
       priority: 'high',
-      assignee: { name: 'Sarah Chen', avatar: 'SC', color: 'violet' },
+      assignee: { name: 'Sarah Chen', avatar: 'SC', color: 'gold' },
       dueDate: '2026-10-20',
       progress: 65,
       tags: ['Design', 'Frontend'],
@@ -99,7 +99,7 @@ function DashboardPreview() {
       title: 'Implement dark mode toggle',
       status: 'review',
       priority: 'medium',
-      assignee: { name: 'Marcus Johnson', avatar: 'MJ', color: 'blue' },
+      assignee: { name: 'Marcus Johnson', avatar: 'MJ', color: 'gold' },
       dueDate: '2026-10-18',
       progress: 90,
       tags: ['Frontend', 'UI'],
@@ -110,7 +110,7 @@ function DashboardPreview() {
       title: 'Set up analytics pipeline',
       status: 'todo',
       priority: 'high',
-      assignee: { name: 'Emily Park', avatar: 'EP', color: 'emerald' },
+      assignee: { name: 'Emily Park', avatar: 'EP', color: 'gold' },
       dueDate: '2026-10-25',
       progress: 0,
       tags: ['Backend', 'Analytics'],
@@ -121,7 +121,7 @@ function DashboardPreview() {
       title: 'API rate limiting',
       status: 'done',
       priority: 'high',
-      assignee: { name: 'Alex Kumar', avatar: 'AK', color: 'amber' },
+      assignee: { name: 'Alex Kumar', avatar: 'AK', color: 'gold' },
       dueDate: '2026-10-15',
       progress: 100,
       tags: ['Backend', 'Security'],
@@ -132,7 +132,7 @@ function DashboardPreview() {
       title: 'Performance optimization',
       status: 'in-progress',
       priority: 'medium',
-      assignee: { name: 'Lisa Wang', avatar: 'LW', color: 'rose' },
+      assignee: { name: 'Lisa Wang', avatar: 'LW', color: 'gold' },
       dueDate: '2026-10-22',
       progress: 40,
       tags: ['Performance', 'Frontend'],
@@ -143,7 +143,7 @@ function DashboardPreview() {
       title: 'Write API documentation',
       status: 'todo',
       priority: 'low',
-      assignee: { name: 'James Wilson', avatar: 'JW', color: 'cyan' },
+      assignee: { name: 'James Wilson', avatar: 'JW', color: 'gold' },
       dueDate: '2026-11-01',
       progress: 15,
       tags: ['Documentation'],
@@ -182,16 +182,16 @@ function DashboardPreview() {
   };
 
   return (
-    <div className="relative min-w-0">
+      <div className="relative min-w-0 font-sans">
       {/* Glow */}
-      <div className="absolute -inset-4 bg-gradient-to-r from-violet-500/5 to-blue-500/5 rounded-3xl blur-2xl opacity-30" aria-hidden="true" />
+      <div className="absolute -inset-4 bg-gradient-to-r from-gold-500/5 to-gold-500/5 rounded-3xl blur-2xl opacity-30" aria-hidden="true" />
 
       <div className="relative min-w-0 overflow-hidden rounded-2xl border border-white/10 glass-strong shadow-[0_25px_50px_-12px_rgba(0,0,0,0.35)]">
         {/* Toolbar */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-4 md:p-6 border-b border-white/5 bg-navy-950/50">
           <div className="flex min-w-0 items-center gap-3">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500/20 to-blue-500/20">
-              <LayoutDashboard className="w-5 h-5 text-violet-400" />
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-gold-500/20 to-gold-500/20">
+              <LayoutDashboard className="w-5 h-5 text-gold-400" />
             </div>
             <div className="min-w-0">
               <h3 className="font-semibold text-navy-50">Sample Project Dashboard</h3>
@@ -591,7 +591,7 @@ function TimelineView({
 
   return (
     <div className="relative">
-      <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-violet-500/30 to-blue-500/30" />
+      <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-gold-500/30 to-gold-500/30" />
 
       <div className="min-w-0 space-y-4 pl-10 sm:space-y-6 sm:pl-14">
         {filteredTasks.map((task, index) => (

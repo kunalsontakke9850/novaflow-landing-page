@@ -51,7 +51,7 @@ export function SocialProof() {
           transition={{ duration: 0.6 }}
           className="mx-auto mb-12 max-w-3xl text-center md:mb-16"
         >
-          <Badge variant="info" size="sm" className="mb-4">
+          <Badge variant="default" size="sm" className="mb-4">
             The idea behind NovaFlow
           </Badge>
           <h2 id="social-proof-heading" className="heading-lg mb-4">
@@ -79,8 +79,8 @@ export function SocialProof() {
                 transition={{ duration: 0.4, delay: 0.1 + index * 0.05 }}
                 className="group flex items-center gap-3 rounded-xl border border-white/8 bg-white/[0.035] px-3 py-2 transition-colors hover:border-white/15 sm:px-4"
               >
-                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-violet-500/20 to-blue-500/20 flex items-center justify-center group-hover:from-violet-500/30 group-hover:to-blue-500/30 transition-colors">
-                  <company.icon className="w-5 h-5 text-violet-400" />
+                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-gold-500/20 to-gold-500/20 flex items-center justify-center group-hover:from-gold-500/30 group-hover:to-gold-500/30 transition-colors">
+                  <company.icon className="w-5 h-5 text-gold-400" />
                 </div>
                 <div className="text-left hidden sm:block">
                   <div className="font-medium text-navy-100 text-sm">{company.name}</div>
@@ -104,8 +104,8 @@ export function SocialProof() {
               transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
             >
               <Card variant="default" padding="lg" hover className="h-full">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-500/20 to-blue-500/20 flex items-center justify-center mb-4">
-                  <benefit.icon className="w-6 h-6 text-violet-400" />
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-gold-500/20 to-gold-500/20 flex items-center justify-center mb-4">
+                  <benefit.icon className="w-6 h-6 text-gold-400" />
                 </div>
                 <h3 className="text-lg font-semibold text-navy-50 mb-2">{benefit.title}</h3>
                 <p className="text-navy-400 text-sm leading-relaxed">{benefit.description}</p>

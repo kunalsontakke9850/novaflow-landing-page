@@ -20,7 +20,7 @@ const features = [
       'A proposed visual builder for mapping repeatable steps, handoffs, and decisions.',
     highlights: ['Visual workflow maps', 'Reusable templates', 'Clear handoffs', 'Flexible process steps'],
     category: 'Automation',
-    color: 'violet',
+    color: 'gold',
   },
   {
     icon: CheckSquare2,
@@ -29,7 +29,7 @@ const features = [
       'A shared view of priorities, owners, due dates, and the work that depends on them.',
     highlights: ['Visible priorities', 'Owners and due dates', 'Task dependencies', 'Progress at a glance'],
     category: 'Tasks',
-    color: 'blue',
+    color: 'gold',
   },
   {
     icon: Users,
@@ -38,7 +38,7 @@ const features = [
       'A place for teams to keep updates and project context alongside their work.',
     highlights: ['Shared project views', 'Activity and updates', 'Team context', 'Connected conversations'],
     category: 'Collaboration',
-    color: 'emerald',
+    color: 'gold',
   },
   {
     icon: BarChart3,
@@ -47,7 +47,7 @@ const features = [
       'Illustrative dashboards for exploring momentum, workload, and potential bottlenecks.',
     highlights: ['Progress trends', 'Bottleneck visibility', 'Workload overview', 'Delivery snapshots'],
     category: 'Analytics',
-    color: 'amber',
+    color: 'gold',
   },
   {
     icon: Bell,
@@ -56,7 +56,7 @@ const features = [
       'A concept for keeping important project updates easy to find and act on.',
     highlights: ['Activity summaries', 'Relevant updates', 'Clear next steps', 'Less scattered context'],
     category: 'Notifications',
-    color: 'rose',
+    color: 'gold',
   },
   {
     icon: Shield,
@@ -65,7 +65,7 @@ const features = [
       'A design exploration of how workspace roles and activity history might be presented.',
     highlights: ['Role-based views', 'Clear permissions', 'Activity history', 'Designed for clarity'],
     category: 'Security',
-    color: 'cyan',
+    color: 'gold',
   },
 ];
 
@@ -85,7 +85,7 @@ export function Features() {
           transition={{ duration: 0.6 }}
           className="mx-auto mb-12 max-w-3xl text-center md:mb-16"
         >
-          <Badge variant="info" size="sm" className="mb-4">
+          <Badge variant="default" size="sm" className="mb-4">
             Product concept
           </Badge>
           <h2 id="features-heading" className="heading-lg mb-4">
@@ -132,12 +132,7 @@ export function Features() {
 function FeatureCard({ feature }: { feature: typeof features[0] }) {
   const IconComponent = feature.icon;
   const colorClasses = {
-    violet: 'from-violet-500 to-violet-600',
-    blue: 'from-blue-500 to-blue-600',
-    emerald: 'from-emerald-500 to-emerald-600',
-    amber: 'from-amber-500 to-amber-600',
-    rose: 'from-rose-500 to-rose-600',
-    cyan: 'from-cyan-500 to-cyan-600',
+    gold: 'from-gold-300 to-gold-600',
   };
 
   return (
@@ -156,9 +151,9 @@ function FeatureCard({ feature }: { feature: typeof features[0] }) {
 
         {/* Icon */}
         <div
-          className={`w-12 h-12 rounded-xl bg-gradient-to-br ${colorClasses[feature.color as keyof typeof colorClasses]}/20 flex items-center justify-center mb-5 group-hover:bg-gradient-to-br group-hover:from-violet-500/30 group-hover:to-blue-500/30 transition-colors`}
+          className={`w-12 h-12 rounded-xl bg-gradient-to-br ${colorClasses[feature.color as keyof typeof colorClasses]}/20 flex items-center justify-center mb-5 group-hover:bg-gradient-to-br group-hover:from-gold-300/30 group-hover:to-gold-600/30 transition-colors`}
         >
-          <IconComponent className="w-6 h-6" style={{ color: `var(--color-${feature.color}-400)` }} aria-hidden="true" />
+          <IconComponent className="w-6 h-6 text-gold-300" aria-hidden="true" />
         </div>
 
         {/* Title */}
@@ -172,7 +167,7 @@ function FeatureCard({ feature }: { feature: typeof features[0] }) {
           {feature.highlights.map((highlight, i) => (
             <li key={i} className="flex items-start gap-2 text-sm text-navy-300">
               <svg
-                className="w-4 h-4 flex-shrink-0 mt-0.5 text-violet-400"
+                className="w-4 h-4 flex-shrink-0 mt-0.5 text-gold-300"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"

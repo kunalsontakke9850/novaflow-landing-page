@@ -11,8 +11,8 @@ describe('Button', () => {
     render(<Button variant="primary">Primary</Button>);
     const button = screen.getByRole('button');
     expect(button).toHaveClass('bg-gradient-to-br');
-    expect(button).toHaveClass('from-violet-500');
-    expect(button).toHaveClass('to-violet-600');
+    expect(button).toHaveClass('from-gold-300');
+    expect(button).toHaveClass('to-gold-500');
   });
 
   it('applies secondary variant classes', () => {

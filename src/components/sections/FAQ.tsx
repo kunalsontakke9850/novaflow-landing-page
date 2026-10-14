@@ -62,7 +62,7 @@ export function FAQ() {
           transition={{ duration: 0.6 }}
           className="mx-auto mb-12 max-w-3xl text-center md:mb-16"
         >
-          <Badge variant="info" size="sm" className="mb-4">
+          <Badge variant="default" size="sm" className="mb-4">
             Common questions
           </Badge>
           <h2 id="faq-heading" className="heading-lg mb-4">
@@ -115,15 +115,15 @@ function FAQItem({ faq, index }: { faq: typeof faqs[0]; index: number }) {
     <Card variant="default" padding="none" className="overflow-hidden">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full px-6 py-5 flex items-center justify-between gap-4 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-violet-500 focus-visible:outline-offset-[-2px]"
+        className="w-full px-6 py-5 flex items-center justify-between gap-4 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-500 focus-visible:outline-offset-[-2px]"
         aria-expanded={isOpen}
         aria-controls={isOpen ? `faq-content-${index}` : undefined}
       >
         <div className="flex items-start gap-3 flex-1">
-          <HelpCircle className="w-5 h-5 flex-shrink-0 text-violet-400 mt-0.5" aria-hidden="true" />
+          <HelpCircle className="w-5 h-5 flex-shrink-0 text-gold-400 mt-0.5" aria-hidden="true" />
           <div>
             <span className="font-medium text-navy-100">{faq.question}</span>
-            <span className="ml-2 px-2 py-0.5 text-xs rounded-full bg-violet-500/20 text-violet-300 border border-violet-500/30">
+            <span className="ml-2 px-2 py-0.5 text-xs rounded-full bg-gold-500/20 text-gold-300 border border-gold-500/30">
               {faq.category}
             </span>
           </div>
@@ -165,7 +165,7 @@ function Badge({ variant = 'default', size = 'md', children, className = '' }: {
   className?: string;
 }) {
   const variants = {
-    default: 'bg-violet-500/20 text-violet-300 border border-violet-500/30',
+    default: 'bg-gold-500/20 text-gold-300 border border-gold-500/30',
     success: 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30',
     warning: 'bg-amber-500/20 text-amber-300 border border-amber-500/30',
     error: 'bg-rose-500/20 text-rose-300 border border-rose-500/30',

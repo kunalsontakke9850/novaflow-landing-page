@@ -22,18 +22,18 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     ...props
   }, ref) => {
     const baseStyles = `
-      inline-flex items-center justify-center gap-2 font-medium
+      inline-flex items-center justify-center gap-2 font-sans font-medium
       rounded-xl transition-all duration-200
-      focus-visible:outline focus-visible:outline-2 focus-visible:outline-violet-500 focus-visible:outline-offset-2
+      focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-300 focus-visible:outline-offset-2
       disabled:opacity-50 disabled:cursor-not-allowed
     `;
 
     const variants = {
       primary: `
-        bg-gradient-to-br from-violet-500 to-violet-600 text-white
-        shadow-[0_4px_20px_-4px_rgba(139,92,246,0.4)]
-        hover:from-violet-600 hover:to-violet-700
-        hover:shadow-[0_8px_30px_-6px_rgba(139,92,246,0.5)]
+        bg-gradient-to-br from-gold-300 to-gold-500 text-navy-950
+        shadow-[0_4px_20px_-4px_rgba(201,159,63,0.35)]
+        hover:from-gold-200 hover:to-gold-400
+        hover:shadow-[0_8px_30px_-6px_rgba(201,159,63,0.42)]
         hover:-translate-y-0.5
         active:translate-y-0
       `,

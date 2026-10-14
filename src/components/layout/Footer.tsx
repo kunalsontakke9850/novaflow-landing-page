@@ -32,12 +32,12 @@ export function Footer() {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true"
-                className="text-violet-400"
+                className="text-gold-300"
               >
                 <defs>
                   <linearGradient id="footerLogoGradient" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stopColor="#8B5CF6"/>
-                    <stop offset="100%" stopColor="#3B82F6"/>
+                    <stop offset="0%" stopColor="#F3D98E"/>
+                    <stop offset="100%" stopColor="#C99F3F"/>
                   </linearGradient>
                 </defs>
                 <path d="M4 16C4 9.373 9.373 4 16 4C22.627 4 28 9.373 28 16C28 22.627 22.627 28 16 28C9.373 28 4 22.627 4 16Z" stroke="url(#footerLogoGradient)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>

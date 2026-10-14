@@ -112,7 +112,7 @@ export function Pricing() {
           transition={{ duration: 0.6 }}
           className="mx-auto mb-10 max-w-3xl text-center md:mb-12"
         >
-          <Badge variant="info" size="sm" className="mb-4">
+          <Badge variant="default" size="sm" className="mb-4">
             Example pricing
           </Badge>
           <h2 id="pricing-heading" className="heading-lg mb-4">
@@ -137,7 +137,7 @@ export function Pricing() {
 
           <button
             onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
-            className="relative w-14 h-8 rounded-full bg-navy-800 border border-white/10 flex items-center p-1 transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-violet-500"
+            className="relative w-14 h-8 rounded-full bg-navy-800 border border-white/10 flex items-center p-1 font-sans transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-500"
             role="switch"
             aria-checked={billingCycle === 'yearly'}
             aria-label={`Switch to ${billingCycle === 'monthly' ? 'yearly' : 'monthly'} billing`}
@@ -147,7 +147,7 @@ export function Pricing() {
                 x: billingCycle === 'yearly' ? '100%' : 0,
               }}
               transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-              className="w-6 h-6 rounded-full bg-gradient-to-r from-violet-500 to-blue-500 shadow-lg"
+              className="w-6 h-6 rounded-full bg-gradient-to-r from-gold-500 to-gold-500 shadow-lg"
             />
           </button>
 
@@ -221,12 +221,12 @@ function PricingCard({ plan, billingCycle }: { plan: typeof plans[0]; billingCyc
     <Card
       variant={plan.popular ? 'elevated' : 'default'}
       padding="lg"
-      className={`relative h-full flex flex-col ${plan.popular ? 'border-violet-500/30 shadow-[0_0_40px_-10px_rgba(139,92,246,0.2)]' : ''}`}
+      className={`relative h-full flex flex-col ${plan.popular ? 'border-gold-500/30 shadow-[0_0_40px_-10px_rgba(201,159,63,0.2)]' : ''}`}
     >
       {/* Popular badge */}
       {plan.popular && (
         <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-          <Badge variant="info" size="sm">
+          <Badge variant="default" size="sm">
             Most Popular
           </Badge>
         </div>

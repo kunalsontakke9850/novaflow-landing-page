@@ -21,9 +21,9 @@ export function Hero() {
       {/* Background Effects */}
       <div className="absolute inset-0" aria-hidden="true">
         {/* Radial gradients */}
-        <div className="absolute top-1/4 left-1/4 h-[500px] w-[500px] rounded-full bg-violet-500/7 blur-3xl animate-pulse-soft" />
-        <div className="absolute bottom-1/4 right-1/4 h-[420px] w-[420px] rounded-full bg-blue-500/7 blur-3xl animate-pulse-soft" style={{ animationDelay: '1.5s' }} />
-        <div className="absolute top-1/2 left-1/2 h-[360px] w-[360px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-500/4 blur-3xl animate-float" />
+        <div className="absolute top-1/4 left-1/4 h-[500px] w-[500px] rounded-full bg-gold-500/7 blur-3xl animate-pulse-soft" />
+        <div className="absolute bottom-1/4 right-1/4 h-[420px] w-[420px] rounded-full bg-gold-500/6 blur-3xl animate-pulse-soft" style={{ animationDelay: '1.5s' }} />
+        <div className="absolute top-1/2 left-1/2 h-[360px] w-[360px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gold-500/4 blur-3xl animate-float" />
 
         {/* Grid pattern */}
         <div className="absolute inset-0 opacity-5" style={{
@@ -42,7 +42,7 @@ export function Hero() {
               transition={{ duration: 0.6, ease: 'easeOut' }}
               className="mb-6 flex flex-wrap justify-center gap-2 lg:justify-start"
             >
-              <Badge variant="info" size="sm" className="px-3 py-1.5">
+              <Badge variant="default" size="sm" className="px-3 py-1.5">
                 Productivity workspace concept
               </Badge>
             </motion.div>
@@ -115,8 +115,8 @@ export function Hero() {
               className="card group p-4 transition-all duration-300 hover:card-hover md:p-5"
               role="listitem"
             >
-              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-violet-500/10 transition-colors group-hover:bg-violet-500/15">
-                <feature.icon className="w-5 h-5 text-violet-400" aria-hidden="true" />
+              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-gold-500/10 transition-colors group-hover:bg-gold-500/15">
+                <feature.icon className="w-5 h-5 text-gold-400" aria-hidden="true" />
               </div>
               <h3 className="mb-1 font-semibold text-navy-50">{feature.label}</h3>
               <p className="text-sm text-navy-400">{feature.desc}</p>
@@ -150,9 +150,9 @@ function DashboardPreview() {
   const chartData = [45, 52, 48, 61, 55, 67, 72, 69, 78, 82, 79, 88];
 
   return (
-      <div className="relative min-w-0">
+      <div className="relative min-w-0 font-sans">
       {/* Glow effect */}
-      <div className="absolute -inset-4 bg-gradient-to-r from-violet-500/10 to-blue-500/10 rounded-3xl blur-2xl opacity-50" aria-hidden="true" />
+      <div className="absolute -inset-4 bg-gradient-to-r from-gold-500/10 to-gold-500/10 rounded-3xl blur-2xl opacity-50" aria-hidden="true" />
 
       <div className="relative glass-strong rounded-2xl overflow-hidden border border-white/10 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)]">
         {/* Header bar */}
@@ -181,16 +181,16 @@ function DashboardPreview() {
                   <h4 className="font-semibold text-navy-50">Project Progress</h4>
                   <p className="text-navy-400 text-sm mt-0.5">Overall completion across all workstreams</p>
                 </div>
-                <Badge variant="info" size="sm" className="shrink-0">Illustrative data</Badge>
+                <Badge variant="default" size="sm" className="shrink-0">Illustrative data</Badge>
               </div>
 
               {/* Progress bars */}
               <div className="space-y-4">
                 {[
-                  { label: 'Design', value: 85, color: 'violet' },
-                  { label: 'Development', value: 72, color: 'blue' },
-                  { label: 'Testing', value: 58, color: 'amber' },
-                  { label: 'Documentation', value: 45, color: 'emerald' },
+                  { label: 'Design', value: 85, color: 'gold' },
+                  { label: 'Development', value: 72, color: 'gold' },
+                  { label: 'Testing', value: 58, color: 'gold' },
+                  { label: 'Documentation', value: 45, color: 'gold' },
                 ].map((item) => (
                   <div key={item.label} className="space-y-1.5">
                     <div className="flex justify-between text-sm">
@@ -216,14 +216,14 @@ function DashboardPreview() {
             {/* Quick Stats */}
             <div className="grid min-w-0 grid-cols-1 gap-3 sm:grid-cols-3 xl:grid-cols-1">
               {[
-                { label: 'Active Tasks', value: '12', icon: CheckCircle, color: 'violet', trend: '+3 this week' },
-                { label: 'Team Velocity', value: '87 pts', icon: Zap, color: 'blue', trend: '+12% vs last sprint' },
-                { label: 'Blockers', value: '2', icon: Shield, color: 'amber', trend: '1 resolved today' },
+                { label: 'Active Tasks', value: '12', icon: CheckCircle, color: 'gold', trend: '+3 this week' },
+                { label: 'Team Velocity', value: '87 pts', icon: Zap, color: 'gold', trend: '+12% vs last sprint' },
+                { label: 'Blockers', value: '2', icon: Shield, color: 'gold', trend: '1 resolved today' },
               ].map((stat) => (
                 <Card key={stat.label} variant="default" padding="md" className="min-w-0 text-center">
                   <div className="flex items-center justify-center gap-2 mb-2">
-                    <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-violet-500/20 to-blue-500/20 flex items-center justify-center">
-                      <stat.icon className="w-4 h-4 text-violet-400" />
+                    <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-gold-500/20 to-gold-500/20 flex items-center justify-center">
+                      <stat.icon className="w-4 h-4 text-gold-400" />
                     </div>
                   </div>
                   <div className="text-2xl font-bold text-navy-50 gradient-text">{stat.value}</div>
@@ -295,7 +295,7 @@ function DashboardPreview() {
             <Card variant="default" padding="none" className="overflow-hidden">
               <div className="flex items-center justify-between gap-3 border-b border-white/5 px-4 py-3">
                 <h4 className="font-semibold text-navy-50">Recent Activity</h4>
-                <Badge variant="info" size="sm">Sample</Badge>
+                <Badge variant="default" size="sm">Sample</Badge>
               </div>
               <div className="p-4">
                 <div className="space-y-4">
@@ -307,8 +307,8 @@ function DashboardPreview() {
                       transition={{ duration: 0.3, delay: 0.7 + index * 0.05 }}
                       className="flex items-start gap-3 p-2 rounded-lg hover:bg-white/5 transition-colors"
                     >
-                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-violet-500/30 to-blue-500/30 flex items-center justify-center flex-shrink-0">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-violet-400">
+                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-gold-500/30 to-gold-500/30 flex items-center justify-center flex-shrink-0">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-gold-400">
                           <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
                           <circle cx="12" cy="7" r="4" />
                         </svg>
@@ -337,12 +337,12 @@ function DashboardPreview() {
               <svg viewBox="0 0 300 128" className="w-full h-full" aria-label="Velocity trend chart showing upward trajectory over 12 sprints">
                 <defs>
                   <linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#8B5CF6" stopOpacity="0.3" />
-                    <stop offset="100%" stopColor="#8B5CF6" stopOpacity="0" />
+                    <stop offset="0%" stopColor="#F3D98E" stopOpacity="0.3" />
+                    <stop offset="100%" stopColor="#F3D98E" stopOpacity="0" />
                   </linearGradient>
                   <linearGradient id="lineGradient" x1="0" y1="0" x2="1" y2="0">
-                    <stop offset="0%" stopColor="#8B5CF6" />
-                    <stop offset="100%" stopColor="#3B82F6" />
+                    <stop offset="0%" stopColor="#F3D98E" />
+                    <stop offset="100%" stopColor="#C99F3F" />
                   </linearGradient>
                 </defs>
 
@@ -384,10 +384,10 @@ function DashboardPreview() {
                     transition={{ duration: 0.3, delay: 1.2 + index * 0.05 }}
                     cx={40 + index * 23.6}
                     cy={110 - (value - 45) * 1.2}
-                    fill="#8B5CF6"
-                    stroke="#151622"
+                    fill="#F3D98E"
+                    stroke="#11100D"
                     strokeWidth="2"
-                    className="hover:r-5 hover:stroke-violet-300 transition-all"
+                    className="hover:r-5 hover:stroke-gold-300 transition-all"
                   />
                 ))}
               </svg>

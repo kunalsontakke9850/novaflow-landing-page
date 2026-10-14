@@ -2,31 +2,32 @@
 
 @theme {
   --font-sans: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-display: "Cal Sans", Inter, system-ui, sans-serif;
+  --font-editorial: "Times New Roman", Times, serif;
+  --font-display: "Times New Roman", Times, serif;
 
-  --color-navy-50: #f0f1f5;
-  --color-navy-100: #e0e2eb;
-  --color-navy-200: #c1c5d7;
-  --color-navy-300: #adb4d0;
-  --color-navy-400: #8992b5;
-  --color-navy-500: #69749a;
-  --color-navy-600: #3b436e;
-  --color-navy-700: #303456;
-  --color-navy-800: #282b45;
-  --color-navy-900: #222438;
-  --color-navy-950: #151622;
+  --color-navy-50: #f5f1e7;
+  --color-navy-100: #e5dfd1;
+  --color-navy-200: #cdc3ae;
+  --color-navy-300: #b4a88e;
+  --color-navy-400: #91846a;
+  --color-navy-500: #a39b8a;
+  --color-navy-600: #918870;
+  --color-navy-700: #554a38;
+  --color-navy-800: #2b271f;
+  --color-navy-900: #1d1b16;
+  --color-navy-950: #11100d;
 
-  --color-violet-50: #f5f3ff;
-  --color-violet-100: #ede9fe;
-  --color-violet-200: #ddd6fe;
-  --color-violet-300: #c4b5fd;
-  --color-violet-400: #a78bfa;
-  --color-violet-500: #8b5cf6;
-  --color-violet-600: #7c3aed;
-  --color-violet-700: #6d28d9;
-  --color-violet-800: #5b21b6;
-  --color-violet-900: #4c1d95;
-  --color-violet-950: #2e1065;
+  --color-gold-50: #fff9e9;
+  --color-gold-100: #faedc7;
+  --color-gold-200: #f3d98e;
+  --color-gold-300: #e9c66d;
+  --color-gold-400: #dfb953;
+  --color-gold-500: #c99f3f;
+  --color-gold-600: #a77e2b;
+  --color-gold-700: #805e20;
+  --color-gold-800: #604719;
+  --color-gold-900: #433214;
+  --color-gold-950: #261c0c;
 
   --color-accent-blue: #3b82f6;
   --color-accent-cyan: #06b6d4;
@@ -34,8 +35,8 @@
   --color-accent-amber: #f59e0b;
   --color-accent-rose: #f43f5e;
 
-  --shadow-glow: 0 0 32px -12px rgba(139, 92, 246, 0.18);
-  --shadow-glow-blue: 0 0 32px -12px rgba(59, 130, 246, 0.16);
+  --shadow-glow: 0 0 32px -12px rgba(223, 185, 83, 0.2);
+  --shadow-glow-blue: 0 0 32px -12px rgba(223, 185, 83, 0.14);
   --shadow-card: 0 4px 20px -8px rgba(0, 0, 0, 0.28), 0 0 0 1px rgba(255, 255, 255, 0.045);
   --shadow-card-hover: 0 10px 28px -10px rgba(0, 0, 0, 0.38), 0 0 0 1px rgba(255, 255, 255, 0.08);
 
@@ -106,9 +107,9 @@ html {
 }
 
 body {
-  font-family: var(--font-sans);
-  background-color: #151622;
-  color: #e0e2eb;
+  font-family: var(--font-editorial);
+  background-color: #11100d;
+  color: #e5dfd1;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -123,13 +124,13 @@ body {
 
 /* Focus visible styles */
 :focus-visible {
-  outline: 2px solid #c4b5fd;
+  outline: 2px solid #e9c66d;
   outline-offset: 2px;
 }
 
 /* Selection styles */
 ::selection {
-  background-color: rgba(139, 92, 246, 0.3);
+  background-color: rgba(223, 185, 83, 0.32);
   color: #fff;
 }
 
@@ -140,16 +141,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #151622;
+  background: #11100d;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3b436e;
+  background: #554a38;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #4a5585;
+  background: #74674f;
 }
 
 /* Utility classes */
@@ -178,7 +179,7 @@ body {
 
 /* Gradient text utility */
 .gradient-text {
-  background: linear-gradient(135deg, #a78bfa 0%, #60a5fa 50%, #22d3ee 100%);
+  background: linear-gradient(110deg, #f3d98e 0%, #dfb953 52%, #b88c37 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -186,14 +187,14 @@ body {
 
 /* Glass morphism */
 .glass {
-  background: rgba(21, 22, 34, 0.7);
+  background: rgba(17, 16, 13, 0.76);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .glass-strong {
-  background: rgba(21, 22, 34, 0.9);
+  background: rgba(17, 16, 13, 0.92);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -224,14 +225,14 @@ body {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
-  color: white;
-  box-shadow: 0 4px 16px -6px rgba(139, 92, 246, 0.32);
+  background: linear-gradient(135deg, #e9c66d 0%, #c99f3f 100%);
+  color: #17130b;
+  box-shadow: 0 4px 16px -6px rgba(201, 159, 63, 0.32);
 }
 
 .btn-primary:hover:not(:disabled) {
-  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
-  box-shadow: 0 7px 22px -8px rgba(139, 92, 246, 0.4);
+  background: linear-gradient(135deg, #f0d27c 0%, #d5ad55 100%);
+  box-shadow: 0 7px 22px -8px rgba(201, 159, 63, 0.38);
   transform: translateY(-1px);
 }
 
@@ -241,7 +242,7 @@ body {
 
 .btn-secondary {
   background: rgba(255, 255, 255, 0.05);
-  color: #e0e2eb;
+  color: #e5dfd1;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -252,11 +253,11 @@ body {
 
 .btn-ghost {
   background: transparent;
-  color: #959cc0;
+  color: #aaa394;
 }
 
 .btn-ghost:hover:not(:disabled) {
-  color: #e0e2eb;
+  color: #e5dfd1;
   background: rgba(255, 255, 255, 0.05);
 }
 
@@ -272,7 +273,7 @@ body {
 
 /* Card base */
 .card {
-  background: rgba(34, 36, 56, 0.6);
+  background: rgba(35, 31, 23, 0.72);
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 1rem;
   transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
@@ -287,22 +288,22 @@ body {
 .input {
   width: 100%;
   padding: 0.75rem 1rem;
-  background: rgba(21, 22, 34, 0.8);
+  background: rgba(17, 16, 13, 0.84);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 0.75rem;
-  color: #e0e2eb;
+  color: #e5dfd1;
   font-size: 0.9375rem;
   transition: all 0.2s ease;
 }
 
 .input::placeholder {
-  color: #6b75a2;
+  color: #988e79;
 }
 
 .input:focus {
   outline: none;
-  border-color: #8b5cf6;
-  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+  border-color: #dfb953;
+  box-shadow: 0 0 0 3px rgba(223, 185, 83, 0.2);
 }
 
 /* Section spacing */
@@ -352,21 +353,21 @@ body {
 
 /* Text styles */
 .text-muted {
-  color: #959cc0;
+  color: #aaa394;
 }
 
 .text-subtle {
-  color: #6b75a2;
+  color: #988e79;
 }
 
 /* Link styles */
 .link {
-  color: #a78bfa;
+  color: #e9c66d;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .link:hover {
-  color: #c4b5fd;
+  color: #f3d98e;
   text-decoration: underline;
 }

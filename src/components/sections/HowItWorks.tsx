@@ -23,8 +23,8 @@ const steps = [
       'A place for project updates',
     ],
     benefits: ['Project context', 'Team workspace', 'Shared updates'],
-    color: 'violet',
-    gradient: 'from-violet-500 to-violet-600',
+    color: 'gold',
+    gradient: 'from-gold-500 to-gold-600',
   },
   {
     number: '02',
@@ -38,8 +38,8 @@ const steps = [
       'Clear progress through each step',
     ],
     benefits: ['Process clarity', 'Repeatable patterns', 'Visible handoffs'],
-    color: 'blue',
-    gradient: 'from-blue-500 to-blue-600',
+    color: 'gold',
+    gradient: 'from-gold-500 to-gold-600',
   },
   {
     number: '03',
@@ -53,8 +53,8 @@ const steps = [
       'Illustrative delivery trends',
     ],
     benefits: ['Useful context', 'Progress trends', 'Team visibility'],
-    color: 'emerald',
-    gradient: 'from-emerald-500 to-emerald-600',
+    color: 'gold',
+    gradient: 'from-gold-500 to-gold-600',
   },
 ];
 
@@ -72,7 +72,7 @@ const integrations = [
 function IntegrationIcon({ className = '' }: { className?: string }) {
   return (
     <div className={`w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center ${className}`} aria-hidden="true">
-      <Link2 className="w-5 h-5 text-violet-300" />
+      <Link2 className="w-5 h-5 text-gold-300" />
     </div>
   );
 }
@@ -92,7 +92,7 @@ export function HowItWorks() {
           transition={{ duration: 0.6 }}
           className="mx-auto mb-12 max-w-3xl text-center md:mb-16"
         >
-          <Badge variant="info" size="sm" className="mb-4">
+          <Badge variant="default" size="sm" className="mb-4">
             How the concept fits together
           </Badge>
           <h2 id="how-it-works-heading" className="heading-lg mb-4">
@@ -106,7 +106,7 @@ export function HowItWorks() {
         {/* Steps */}
         <div className="relative">
           {/* Connecting line */}
-          <div className="hidden lg:block absolute top-14 left-1/2 -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-violet-500/30 via-blue-500/30 to-emerald-500/30" aria-hidden="true" />
+          <div className="hidden lg:block absolute top-14 left-1/2 -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-gold-500/30 via-gold-400/30 to-gold-300/30" aria-hidden="true" />
 
           <div className="relative z-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
             {steps.map((step, index) => (
@@ -145,7 +145,7 @@ export function HowItWorks() {
                 transition={{ duration: 0.3, delay: 0.6 + integrations.indexOf(integration) * 0.05 }}
                 className="card p-4 text-center hover:card-hover transition-all group"
               >
-                <IntegrationIcon className="mx-auto mb-2 group-hover:border-violet-500/50 transition-colors" />
+                <IntegrationIcon className="mx-auto mb-2 group-hover:border-gold-500/50 transition-colors" />
                 <div className="font-medium text-navy-100 text-sm">{integration.name}</div>
                 <div className="text-xs text-navy-500">{integration.category}</div>
               </motion.div>
@@ -205,7 +205,7 @@ function StepCard({ step }: { step: typeof steps[0] }) {
       {/* Benefits */}
       <div className="flex flex-wrap gap-2 mb-6">
         {step.benefits.map((benefit, i) => (
-          <Badge key={i} variant="default" size="sm" className={`bg-${step.color}-500/20 text-${step.color}-300 border-${step.color}-500/30`}>
+          <Badge key={i} variant="default" size="sm">
             {benefit}
           </Badge>
         ))}

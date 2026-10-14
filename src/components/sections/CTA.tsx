@@ -13,7 +13,7 @@ export function CTA() {
     >
       {/* Background */}
       <div className="absolute inset-0" aria-hidden="true">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-violet-500/10 to-blue-500/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-gold-500/10 to-gold-500/10 rounded-full blur-3xl" />
         <div className="absolute inset-0 opacity-5" style={{
           backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3e%3cpath fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='0.5' d='M0 30h60M30 0v60'/%3e%3c/svg%3e")`,
           backgroundSize: '60px 60px',
@@ -28,7 +28,7 @@ export function CTA() {
           transition={{ duration: 0.7 }}
           className="mx-auto max-w-4xl text-center"
         >
-          <Badge variant="info" size="sm" className="mb-6">
+          <Badge variant="default" size="sm" className="mb-6">
             Take a closer look
           </Badge>
 
