@@ -6,27 +6,27 @@ import { Card } from '@/components/ui/Card';
 const faqs = [
   {
     question: 'What is NovaFlow and who is it for?',
-    answer: 'NovaFlow in this repository is a fictional product concept. The project contains a landing page and simulated dashboard preview, not a live productivity workspace.',
+    answer: 'NovaFlow is a fictional productivity workspace concept. This project is a landing page with an interactive dashboard preview, not a live workspace.',
     category: 'Getting Started',
   },
   {
-    question: 'How does the AI workflow automation work?',
-    answer: 'The page describes a proposed AI workflow feature, but no AI service or workflow engine is connected.',
+    question: 'Are the workflow features connected?',
+    answer: 'No. The workflow and AI feature descriptions are illustrative; there is no connected AI service or workflow engine.',
     category: 'Features',
   },
   {
     question: 'What integrations does NovaFlow support?',
-    answer: 'The integrations shown are illustrative. This frontend demo has no OAuth flows, third-party integrations, webhooks, or API.',
+    answer: 'The integration categories are examples only. This frontend has no third-party integrations, webhooks, or API.',
     category: 'Integrations',
   },
   {
     question: 'Is my data secure and private?',
-    answer: 'There is no account system or product data store in this demo, and no security certification is claimed. Security-related feature text is concept content only.',
+    answer: 'This demo has no account system or product data store. Its security and access-control descriptions are design concepts, not implemented protections or certifications.',
     category: 'Security',
   },
   {
     question: 'Can I import my existing projects and data?',
-    answer: 'No import flow is implemented. The dashboard preview uses static, synthetic sample data.',
+    answer: 'There is no import flow. The dashboard preview uses illustrative sample data.',
     category: 'Migration',
   },
   {
@@ -63,13 +63,13 @@ export function FAQ() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <Badge variant="info" size="sm" className="mb-4">
-            Frequently Asked Questions
+            Common questions
           </Badge>
           <h2 id="faq-heading" className="heading-lg mb-4">
-            Everything you need to <span className="gradient-text">know</span>
+            A few things to <span className="gradient-text">know</span>
           </h2>
           <p className="text-navy-300 text-lg">
-            This concept does not connect to a contact or support service.
+            A quick guide to what this concept includes and how to read the examples.
           </p>
         </motion.div>
 
@@ -99,8 +99,8 @@ export function FAQ() {
           className="text-center mt-16"
         >
           <Card variant="outlined" padding="lg" className="max-w-xl mx-auto">
-            <h3 className="text-lg font-semibold text-navy-50 mb-2">Still have questions?</h3>
-            <p className="text-navy-400 text-sm">Support contact is not available in this frontend demo.</p>
+            <h3 className="text-lg font-semibold text-navy-50 mb-2">A portfolio concept, built in the open</h3>
+            <p className="text-navy-400 text-sm">The page demonstrates a product direction and frontend interactions. It is not a subscription service.</p>
           </Card>
         </motion.div>
       </div>

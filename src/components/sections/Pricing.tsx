@@ -8,7 +8,7 @@ import { Badge } from '@/components/ui/Badge';
 const plans = [
   {
     name: 'Free',
-    description: 'For individuals and small projects',
+    description: 'A starting point for the concept',
     monthlyPrice: 0,
     yearlyPrice: 0,
     features: [
@@ -23,13 +23,13 @@ const plans = [
       { name: 'Audit logs', included: false },
       { name: 'Priority support', included: false },
     ],
-    cta: 'See demo details',
+    cta: 'Explore the concept',
     variant: 'secondary' as const,
     popular: false,
   },
   {
     name: 'Pro',
-    description: 'For professionals and growing teams',
+    description: 'An expanded workspace concept',
     monthlyPrice: 29,
     yearlyPrice: 24,
     features: [
@@ -44,13 +44,13 @@ const plans = [
       { name: 'Audit logs', included: false },
       { name: 'Dedicated success manager', included: false },
     ],
-    cta: 'See demo details',
+    cta: 'Explore the concept',
     variant: 'primary' as const,
     popular: true,
   },
   {
     name: 'Team',
-    description: 'For organizations needing scale & security',
+    description: 'A larger team concept',
     monthlyPrice: 79,
     yearlyPrice: 65,
     features: [
@@ -65,7 +65,7 @@ const plans = [
       { name: 'Custom AI model training', included: true },
       { name: '24/7 phone support', included: true },
     ],
-    cta: 'See demo details',
+    cta: 'Explore the concept',
     variant: 'secondary' as const,
     popular: false,
   },
@@ -113,13 +113,13 @@ export function Pricing() {
           className="text-center max-w-3xl mx-auto mb-12"
         >
           <Badge variant="info" size="sm" className="mb-4">
-            Concept pricing — illustrative only
+            Example pricing
           </Badge>
           <h2 id="pricing-heading" className="heading-lg mb-4">
-            Example <span className="gradient-text">pricing layout</span>
+            Plans as a <span className="gradient-text">starting point</span>
           </h2>
           <p className="text-navy-300 text-lg">
-            Sample prices for layout demonstration only. No plans or free trial are available.
+            Illustrative plan names, features, and prices to show how a future offer might be presented. No plans are available.
           </p>
         </motion.div>
 

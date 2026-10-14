@@ -14,45 +14,45 @@ const steps = [
   {
     number: '01',
     icon: Link2,
-    title: 'Connect your workspace',
-    description: 'Concept: connect a workspace to issue tracking, communication, and documentation tools. No third-party connections are implemented.',
+    title: 'Bring the work together',
+    description: 'Imagine project context from planning, communication, and documentation living in one workspace.',
     details: [
-      'OAuth & SSO authentication',
-      'Bidirectional sync',
-      'Historical data import',
-      'Custom webhook support',
+      'A shared project view',
+      'Connected team context',
+      'Clear ownership',
+      'A place for project updates',
     ],
-    benefits: ['Connection flow concept', 'Import UI concept', 'Workspace setup concept'],
+    benefits: ['Project context', 'Team workspace', 'Shared updates'],
     color: 'violet',
     gradient: 'from-violet-500 to-violet-600',
   },
   {
     number: '02',
     icon: Zap,
-    title: 'Automate repetitive tasks',
-    description: 'Concept: build workflows visually or describe a proposed flow in plain language. No AI or workflow service is connected.',
+    title: 'Make the next step clear',
+    description: 'Map repeatable processes and handoffs in a visual workflow concept.',
     details: [
-      'Natural language to workflow',
-      'Visual drag-and-drop builder',
-      'Conditional branching & loops',
-      'Error handling & retries',
+      'Visual process maps',
+      'Reusable workflow patterns',
+      'Visible decisions and handoffs',
+      'Clear progress through each step',
     ],
-    benefits: ['Workflow visualization', 'Template gallery concept', 'Error-state preview'],
+    benefits: ['Process clarity', 'Repeatable patterns', 'Visible handoffs'],
     color: 'blue',
     gradient: 'from-blue-500 to-blue-600',
   },
   {
     number: '03',
     icon: TrendingUp,
-    title: 'Track progress & improve',
-    description: 'Concept: dashboards could summarize bottlenecks and delivery estimates. The preview uses static sample values.',
+    title: 'Understand progress',
+    description: 'Explore how a team dashboard could surface momentum, blockers, and what needs attention.',
     details: [
-      'Velocity & cycle time tracking',
-      'Bottleneck detection',
-      'Predictive forecasting',
-      'Team health scores',
+      'Project progress snapshots',
+      'Potential blockers in view',
+      'Workload at a glance',
+      'Illustrative delivery trends',
     ],
-    benefits: ['Actionable insights', 'Weekly summaries', 'Custom reports'],
+    benefits: ['Useful context', 'Progress trends', 'Team visibility'],
     color: 'emerald',
     gradient: 'from-emerald-500 to-emerald-600',
   },
@@ -93,13 +93,13 @@ export function HowItWorks() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <Badge variant="info" size="sm" className="mb-4">
-            Proposed workflow concept
+            How the concept fits together
           </Badge>
           <h2 id="how-it-works-heading" className="heading-lg mb-4">
-            Imagine a clearer way <span className="gradient-text">to work</span>
+            From shared context to <span className="gradient-text">clear progress</span>
           </h2>
           <p className="text-navy-300 text-lg">
-            The steps, features, and integration examples below are illustrative. This project has no connected product services.
+            These workflow steps and integration categories are examples for the concept. They are not connected to external services.
           </p>
         </motion.div>
 
@@ -133,8 +133,8 @@ export function HowItWorks() {
           className="mt-20"
         >
           <div className="text-center mb-8">
-            <h3 className="heading-md mb-2">Integration concepts</h3>
-            <p className="text-navy-400">Static examples only; no external connectors are configured.</p>
+            <h3 className="heading-md mb-2">Designed to fit your toolkit</h3>
+            <p className="text-navy-400">Illustrative integration categories. No external connectors are configured.</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3">
             {integrations.map((integration) => (

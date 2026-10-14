@@ -4,34 +4,34 @@ import { Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 
 const audienceTypes = [
-  { name: 'Engineering', type: 'Sample workflow audience', icon: Building2 },
-  { name: 'Product', type: 'Sample workflow audience', icon: TrendingUp },
-  { name: 'Analytics', type: 'Sample workflow audience', icon: Globe },
-  { name: 'Design', type: 'Sample workflow audience', icon: Users },
-  { name: 'Operations', type: 'Sample workflow audience', icon: Shield },
-  { name: 'Agencies', type: 'Sample workflow audience', icon: Award },
+  { name: 'Plan', type: 'Shape the work', icon: Building2 },
+  { name: 'Create', type: 'Build together', icon: TrendingUp },
+  { name: 'Review', type: 'Keep work moving', icon: Globe },
+  { name: 'Design', type: 'Share context', icon: Users },
+  { name: 'Deliver', type: 'See what is next', icon: Shield },
+  { name: 'Reflect', type: 'Learn as a team', icon: Award },
 ];
 
 const benefits = [
   {
     icon: TrendingUp,
-    title: 'Workflow concepts',
-    description: 'The page illustrates possible automation flows; no workflow engine is connected.',
+    title: 'Workflows in view',
+    description: 'A proposed way to bring project steps and handoffs into one clear view.',
   },
   {
     icon: Users,
-    title: 'Collaboration preview',
-    description: 'The dashboard mockup shows a possible collaboration interface using synthetic sample data.',
+    title: 'Shared context',
+    description: 'A workspace concept for keeping ownership, updates, and decisions close to the work.',
   },
   {
     icon: Shield,
-    title: 'Security is not implemented',
-    description: 'This frontend concept has no account system and does not claim a security certification.',
+    title: 'A focused workspace',
+    description: 'An interface concept that keeps tasks, progress, and team activity together.',
   },
   {
     icon: Award,
-    title: 'Analytics preview',
-    description: 'Charts and dashboard figures are static illustrative values, not connected to a data source.',
+    title: 'Progress at a glance',
+    description: 'Sample charts explore how a team might understand momentum and blockers.',
   },
 ];
 
@@ -52,17 +52,17 @@ export function SocialProof() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <Badge variant="info" size="sm" className="mb-4">
-            Illustrative content only
+            The idea behind NovaFlow
           </Badge>
           <h2 id="social-proof-heading" className="heading-lg mb-4">
             A concept for <span className="gradient-text">collaborative teams</span>
           </h2>
           <p className="text-navy-300 text-lg">
-            No customer endorsements, operating metrics, or real service capabilities are represented here.
+            NovaFlow is a fictional productivity workspace concept. This page explores how a calmer, more connected project view could feel.
           </p>
         </motion.div>
 
-        {/* Company Logos / Types */}
+        {/* Example workflow stages */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -93,7 +93,7 @@ export function SocialProof() {
           </div>
         </motion.div>
 
-        {/* Benefits Grid */}
+        {/* Concept highlights */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {benefits.map((benefit, index) => (
             <motion.div

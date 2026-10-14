@@ -61,7 +61,7 @@ export function Footer() {
               <span>NovaFlow</span>
             </Link>
             <p className="text-navy-400 text-sm mb-6 max-w-xs leading-relaxed">
-              Responsive landing-page concept for a fictional AI productivity workspace. This frontend demo has no product services connected.
+              A fictional productivity workspace, explored through a responsive landing page and interactive dashboard.
             </p>
           </div>
 
@@ -159,7 +159,7 @@ export function Footer() {
           <p className="text-navy-500 text-sm">
             © {currentYear} NovaFlow. All rights reserved.
             <span className="mx-2">·</span>
-            <span className="text-navy-600">Fictional product for portfolio demonstration.</span>
+            <span className="text-navy-600">A portfolio concept. Features and sample data are illustrative.</span>
           </p>
 
           {/* Links */}

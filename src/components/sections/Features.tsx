@@ -15,19 +15,19 @@ import { Link } from 'react-scroll';
 const features = [
   {
     icon: Zap,
-    title: 'AI Workflow Automation',
+    title: 'Workflow automation',
     description:
-      'Concept: describe a workflow in natural language and assemble its triggers and steps in a visual builder.',
-    highlights: ['Natural language to workflow', '100+ pre-built templates', 'Visual workflow builder', 'Conditional logic & loops'],
+      'A proposed visual builder for mapping repeatable steps, handoffs, and decisions.',
+    highlights: ['Visual workflow maps', 'Reusable templates', 'Clear handoffs', 'Flexible process steps'],
     category: 'Automation',
     color: 'violet',
   },
   {
     icon: CheckSquare2,
-    title: 'Intelligent Task Management',
+    title: 'Tasks with clear ownership',
     description:
-      'Concept: task prioritization, scheduling, and estimates in one workspace view.',
-    highlights: ['AI priority scoring', 'Auto-scheduling', 'Smart estimates', 'Dependency tracking'],
+      'A shared view of priorities, owners, due dates, and the work that depends on them.',
+    highlights: ['Visible priorities', 'Owners and due dates', 'Task dependencies', 'Progress at a glance'],
     category: 'Tasks',
     color: 'blue',
   },
@@ -35,8 +35,8 @@ const features = [
     icon: Users,
     title: 'Team Collaboration',
     description:
-      'Concept: shared workspaces, comments, and notifications for teams working together.',
-    highlights: ['Real-time sync', 'Threaded comments', '@mentions & notifications', 'Shared workspaces'],
+      'A place for teams to keep updates and project context alongside their work.',
+    highlights: ['Shared project views', 'Activity and updates', 'Team context', 'Connected conversations'],
     category: 'Collaboration',
     color: 'emerald',
   },
@@ -44,8 +44,8 @@ const features = [
     icon: BarChart3,
     title: 'Project Analytics',
     description:
-      'Concept: a dashboard for velocity, bottlenecks, capacity, and delivery estimates.',
-    highlights: ['Velocity tracking', 'Bottleneck detection', 'Capacity planning', 'Predictive forecasting'],
+      'Illustrative dashboards for exploring momentum, workload, and potential bottlenecks.',
+    highlights: ['Progress trends', 'Bottleneck visibility', 'Workload overview', 'Delivery snapshots'],
     category: 'Analytics',
     color: 'amber',
   },
@@ -53,17 +53,17 @@ const features = [
     icon: Bell,
     title: 'Smart Notifications',
     description:
-      'Concept: notification summaries and priority alerts designed to reduce noise.',
-    highlights: ['Smart digest', 'Priority routing', 'Context-aware timing', 'Cross-platform sync'],
+      'A concept for keeping important project updates easy to find and act on.',
+    highlights: ['Activity summaries', 'Relevant updates', 'Clear next steps', 'Less scattered context'],
     category: 'Notifications',
     color: 'rose',
   },
   {
     icon: Shield,
-    title: 'Secure Workspace',
+    title: 'Thoughtful access',
     description:
-      'Concept: possible access controls and audit logs. No authentication or security certification is provided.',
-    highlights: ['Access control concept', 'Role permissions concept', 'Audit log concept', 'No certification claimed'],
+      'A design exploration of how workspace roles and activity history might be presented.',
+    highlights: ['Role-based views', 'Clear permissions', 'Activity history', 'Designed for clarity'],
     category: 'Security',
     color: 'cyan',
   },
@@ -86,13 +86,13 @@ export function Features() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <Badge variant="info" size="sm" className="mb-4">
-            Core Capabilities
+            Product concept
           </Badge>
           <h2 id="features-heading" className="heading-lg mb-4">
-            Everything you need to <span className="gradient-text">work in flow</span>
+            A workspace shaped around <span className="gradient-text">the way teams work</span>
           </h2>
           <p className="text-navy-300 text-lg">
-            These cards describe proposed product capabilities; none are connected to a live service.
+            Explore ideas for planning, collaboration, and project visibility. All features are illustrative; no product services are connected.
           </p>
         </motion.div>
 
@@ -120,7 +120,7 @@ export function Features() {
           className="text-center mt-16"
         >
           <Link to="how-it-works" smooth duration={500} offset={-80} className="btn btn-secondary btn-lg gap-3">
-            View All Features
+            Explore the workflow
             <ArrowRight className="w-4 h-4" />
           </Link>
         </motion.div>

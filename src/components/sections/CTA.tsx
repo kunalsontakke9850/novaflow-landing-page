@@ -29,25 +29,24 @@ export function CTA() {
           className="text-center max-w-4xl mx-auto"
         >
           <Badge variant="info" size="sm" className="mb-6">
-            Frontend demo only
+            Take a closer look
           </Badge>
 
           <h2 id="cta-heading" className="heading-xl mb-6 text-balance">
-            Explore the NovaFlow <span className="gradient-text">workspace concept.</span>
+            See how NovaFlow could <span className="gradient-text">bring work into focus.</span>
           </h2>
 
           <p className="text-navy-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
-            This page is an interactive frontend concept. It has no accounts, integrations, or payments connected.
-            Product features, sample data, and pricing are illustrative.
+            Explore the interactive dashboard and the ideas behind the workspace. Features, sample data, and pricing are illustrative; no product services are connected.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
             <Link to="product-showcase" smooth duration={500} offset={-80} className="btn btn-primary btn-lg w-full sm:w-auto gap-3">
-              Explore product preview
+              Explore the dashboard
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link to="pricing" smooth duration={500} offset={-80} className="btn btn-secondary btn-lg w-full sm:w-auto">
-              View pricing concept
+              See example pricing
             </Link>
           </div>
 
@@ -72,19 +71,19 @@ export function CTA() {
                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
                 <polyline points="22 4 12 14.01 9 11.01" />
               </svg>
-              <span>No account flow</span>
+              <span>Sample dashboard data</span>
             </div>
             <div className="flex items-center gap-2">
               <svg className="w-4 h-4 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
                 <polyline points="22 4 12 14.01 9 11.01" />
               </svg>
-              <span>No external product services</span>
+              <span>No product services connected</span>
             </div>
           </div>
         </motion.div>
 
-        {/* Demo limitations */}
+        {/* Project context */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -94,7 +93,7 @@ export function CTA() {
         >
           <Card variant="outlined" padding="md" className="max-w-2xl mx-auto">
             <p className="text-center text-navy-300 text-sm">
-              Product actions are intentionally not connected to sign-up, sales, support, or payment services.
+              NovaFlow is a fictional product concept created to demonstrate a responsive landing page and interactive dashboard.
             </p>
           </Card>
         </motion.div>

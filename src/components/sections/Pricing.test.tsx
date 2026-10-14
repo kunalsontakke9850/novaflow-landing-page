@@ -82,7 +82,7 @@ describe('Pricing', () => {
 
   it('links plan CTAs to the demo details instead of implying checkout', () => {
     render(<Pricing />);
-    const links = screen.getAllByRole('link', { name: /see demo details/i });
+    const links = screen.getAllByRole('link', { name: /explore the concept/i });
     expect(links).toHaveLength(3);
     links.forEach((link) => expect(link).toHaveAttribute('href', '#cta'));
   });
