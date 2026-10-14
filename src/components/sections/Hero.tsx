@@ -43,7 +43,7 @@ export function Hero() {
               className="mb-6 flex flex-wrap justify-center gap-2 lg:justify-start"
             >
               <Badge variant="default" size="sm" className="px-3 py-1.5">
-                Productivity workspace concept
+                Project management workspace concept
               </Badge>
             </motion.div>
 
@@ -54,7 +54,7 @@ export function Hero() {
               transition={{ duration: 0.7, ease: 'easeOut', delay: 0.1 }}
               className="heading-xl mb-6 max-w-2xl text-balance text-navy-50"
             >
-              A clearer way to move work forward.
+              Plan projects, manage tasks, and track progress in one workspace.
             </motion.h1>
 
             <motion.p
@@ -63,7 +63,7 @@ export function Hero() {
               transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 }}
               className="mx-auto mb-8 max-w-xl text-lg leading-relaxed text-navy-300 md:text-xl lg:mx-0"
             >
-              A concept for bringing projects, priorities, and team updates into one calm, focused workspace.
+              Explore this interactive portfolio demo of a project workspace. It brings tasks, owners, progress, and team updates together using sample data; it isn’t a live service.
             </motion.p>
 
             <motion.div
@@ -82,7 +82,7 @@ export function Hero() {
             </motion.div>
 
             <p className="text-sm font-medium text-navy-400">
-              Interactive concept <span aria-hidden="true">·</span> Illustrative dashboard data
+              Interactive portfolio demo <span aria-hidden="true">·</span> Sample data
             </p>
           </div>
 
