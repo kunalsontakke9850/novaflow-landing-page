@@ -104,10 +104,7 @@ export function HowItWorks() {
         </motion.div>
 
         {/* Steps */}
-        <div className="relative">
-          {/* Connecting line */}
-          <div className="hidden lg:block absolute top-14 left-1/2 -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-gold-500/30 via-gold-400/30 to-gold-300/30" aria-hidden="true" />
-
+        <div>
           <div className="relative z-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
             {steps.map((step, index) => (
               <motion.div
