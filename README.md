@@ -52,7 +52,7 @@ npm run preview
 
 The site is a static Vite single-page app and does not need environment variables. A Netlify configuration is included; connect the repository to Netlify and use the configured build command (`npm run build`) and publish directory (`dist`). Add the production canonical URL and social preview image to `index.html` after choosing the real deployment domain and preparing an image.
 
-There is currently no live deployment URL. No hosting account or remote repository is configured in this workspace.
+There is currently no live deployment URL. Hosting is not configured in this workspace.
 
 ## Project layout
 
