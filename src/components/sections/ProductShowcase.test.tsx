@@ -29,4 +29,10 @@ describe('ProductShowcase', () => {
     expect(screen.getByRole('button', { name: /new task/i })).toBeDisabled();
     expect(screen.getAllByRole('button', { name: /add task/i }).every((button) => (button as HTMLButtonElement).disabled)).toBe(true);
   });
+
+  it('labels the scrollable dashboard content region', () => {
+    render(<ProductShowcase />);
+
+    expect(screen.getByRole('region', { name: /dashboard content/i })).toBeInTheDocument();
+  });
 });

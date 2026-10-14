@@ -154,26 +154,26 @@ function DashboardPreview() {
   };
 
   return (
-    <div className="relative">
+    <div className="relative min-w-0">
       {/* Glow */}
       <div className="absolute -inset-4 bg-gradient-to-r from-violet-500/5 to-blue-500/5 rounded-3xl blur-2xl opacity-30" aria-hidden="true" />
 
-      <div className="relative glass-strong rounded-2xl overflow-hidden border border-white/10 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)]">
+      <div className="relative min-w-0 overflow-hidden rounded-2xl border border-white/10 glass-strong shadow-[0_25px_50px_-12px_rgba(0,0,0,0.35)]">
         {/* Toolbar */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-4 md:p-6 border-b border-white/5 bg-navy-950/50">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500/20 to-blue-500/20 flex items-center justify-center">
+          <div className="flex min-w-0 items-center gap-3">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500/20 to-blue-500/20">
               <LayoutDashboard className="w-5 h-5 text-violet-400" />
             </div>
-            <div>
+            <div className="min-w-0">
               <h3 className="font-semibold text-navy-50">Sample Project Dashboard</h3>
               <p className="text-xs text-navy-400">Synthetic data · No live workspace</p>
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center gap-3 w-full sm:w-auto">
+          <div className="flex w-full min-w-0 flex-wrap items-center gap-2 sm:w-auto sm:gap-3">
             {/* View Toggle */}
-            <div className="flex bg-navy-800/50 rounded-lg p-1 border border-white/5" role="tablist" aria-label="View options">
+            <div className="flex min-w-0 items-center rounded-lg border border-white/5 bg-navy-800/50 p-1" role="tablist" aria-label="View options">
               {[
                 { id: 'board', icon: LayoutDashboard, label: 'Board' },
                 { id: 'list', icon: CheckSquare, label: 'List' },
@@ -188,7 +188,7 @@ function DashboardPreview() {
                   aria-selected={activeView === view.id}
                   tabIndex={activeView === view.id ? 0 : -1}
                   onClick={() => setActiveView(view.id as typeof activeView)}
-                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-medium transition-all ${
+                  className={`flex min-h-10 min-w-10 items-center justify-center gap-1.5 rounded-md px-2 py-1.5 text-sm font-medium transition-all sm:px-3 ${
                     activeView === view.id
                       ? 'bg-white/10 text-navy-50 shadow-sm'
                       : 'text-navy-400 hover:text-navy-200'
@@ -204,7 +204,7 @@ function DashboardPreview() {
             <select
               value={filter}
               onChange={(e) => setFilter(e.target.value as typeof filter)}
-              className="input py-2 px-3 text-sm bg-navy-800/50 border-white/10"
+              className="input w-auto min-w-28 flex-1 py-2 px-3 text-sm bg-navy-800/50 border-white/10 sm:flex-none"
               aria-label="Filter tasks"
             >
               <option value="all">All Tasks</option>
@@ -219,8 +219,8 @@ function DashboardPreview() {
         </div>
 
         {/* Board View */}
-        <div className="p-4 md:p-6 overflow-x-auto">
-          <div id="dashboard-view-panel" role="tabpanel" aria-labelledby={`view-tab-${activeView}`} tabIndex={0}>
+        <div className="min-w-0 overflow-x-auto p-3 sm:p-4 md:p-6" role="region" aria-label="Dashboard content" tabIndex={0}>
+          <div id="dashboard-view-panel" className="min-w-0" role="tabpanel" aria-labelledby={`view-tab-${activeView}`} tabIndex={0}>
             {activeView === 'board' ? (
               <BoardView columns={columns} tasks={boardTasks} getStatusColor={getStatusColor} getPriorityColor={getPriorityColor} />
             ) : activeView === 'list' ? (
@@ -232,8 +232,8 @@ function DashboardPreview() {
         </div>
 
         {/* Footer Stats */}
-        <div className="flex flex-wrap items-center justify-between gap-4 px-4 md:px-6 py-4 border-t border-white/5 bg-navy-950/30">
-          <div className="flex items-center gap-6 text-sm text-navy-400">
+        <div className="flex flex-wrap items-center justify-between gap-4 border-t border-white/5 bg-navy-950/30 px-4 py-4 md:px-6">
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-navy-300">
             <span className="flex items-center gap-1.5">
               <TrendingUp className="w-4 h-4 text-emerald-400" />
               <span>Velocity: <span className="text-navy-100 font-medium">87 pts</span>/sprint</span>
@@ -287,19 +287,19 @@ function BoardView({
   getPriorityColor: Function;
 }) {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 min-h-[500px]">
+    <div className="grid min-w-0 grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-3 xl:gap-4">
       {columns.map((column) => (
         <motion.div
           key={column.id}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: columns.indexOf(column) * 0.05 }}
-          className="flex flex-col"
+          className="flex min-w-0 flex-col"
         >
-          <div className="flex items-center justify-between mb-3 px-1">
+          <div className="mb-3 flex min-w-0 items-center justify-between gap-2 px-1">
             <h4 className="font-medium text-navy-300 text-sm uppercase tracking-wider flex items-center gap-2">
               {column.title}
-              <Badge variant="default" size="sm" className={`bg-${column.color}-500/20 text-${column.color}-300 border-${column.color}-500/30`}>
+              <Badge variant="default" size="sm" className={`shrink-0 bg-${column.color}-500/20 text-${column.color}-300 border-${column.color}-500/30`}>
                 {column.count}
               </Badge>
             </h4>
@@ -307,7 +307,7 @@ function BoardView({
           </div>
 
           <div
-            className="flex-1 space-y-3 min-h-[400px] p-1 rounded-xl bg-navy-900/30 border border-white/5"
+            className="min-h-48 min-w-0 flex-1 space-y-3 rounded-xl border border-white/5 bg-navy-900/30 p-1 sm:min-h-72"
             role="list"
             aria-label={`${column.title} tasks`}
           >
@@ -351,7 +351,7 @@ function TaskCard({
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, delay: index * 0.03 }}
-      className="card p-4 cursor-pointer group relative overflow-hidden"
+      className="card group relative min-w-0 cursor-pointer overflow-hidden p-3 sm:p-4"
       role="listitem"
       tabIndex={0}
     >
@@ -362,20 +362,20 @@ function TaskCard({
         }}
       />
 
-      <div className="flex items-start gap-3">
+      <div className="flex min-w-0 items-start gap-3">
         <div className="w-2 h-2 rounded-full flex-shrink-0 mt-1.5"
           style={{ backgroundColor: `var(--color-${getPriorityColor(task.priority)}-500)` }}
         />
 
-        <div className="flex-1 min-w-0">
-          <div className="flex items-start justify-between gap-2">
-            <span className="font-mono text-xs text-navy-400">{task.id}</span>
-            <Badge variant={task.status === 'done' ? 'success' : task.status === 'in-progress' ? 'info' : task.status === 'review' ? 'warning' : 'default'} size="sm">
+        <div className="min-w-0 flex-1">
+          <div className="flex min-w-0 items-start justify-between gap-2">
+            <span className="min-w-0 truncate font-mono text-xs text-navy-400">{task.id}</span>
+            <Badge className="shrink-0 whitespace-nowrap" variant={task.status === 'done' ? 'success' : task.status === 'in-progress' ? 'info' : task.status === 'review' ? 'warning' : 'default'} size="sm">
               {task.status.replace('-', ' ')}
             </Badge>
           </div>
 
-          <h5 className="font-medium text-navy-100 mt-1.5 line-clamp-1">{task.title}</h5>
+          <h5 className="mt-1.5 line-clamp-2 break-words font-medium text-navy-100">{task.title}</h5>
 
           <p className="text-navy-500 text-xs mt-1 line-clamp-2">{task.description}</p>
 
@@ -451,8 +451,8 @@ function ListView({
   });
 
   return (
-    <div className="overflow-x-auto">
-      <table className="w-full text-left" role="table">
+    <div className="min-w-0 overflow-x-auto" role="region" aria-label="Scrollable task table" tabIndex={0}>
+      <table className="w-full min-w-[900px] text-left" role="table">
         <thead>
           <tr className="border-b border-white/5">
             {['Task', 'Status', 'Priority', 'Assignee', 'Due Date', 'Progress', ''].map((header, i) => (
@@ -471,8 +471,8 @@ function ListView({
               transition={{ duration: 0.3, delay: index * 0.03 }}
               className="border-b border-white/5 hover:bg-white/5 transition-colors"
             >
-              <td className="py-4 px-1">
-                <div>
+              <td className="min-w-64 py-4 px-1">
+                <div className="min-w-0 max-w-sm">
                   <div className="flex items-center gap-2 mb-1">
                     <span className="font-mono text-xs text-navy-400">{task.id}</span>
                     <Badge variant={task.status === 'done' ? 'success' : task.status === 'in-progress' ? 'info' : task.status === 'review' ? 'warning' : 'default'} size="sm">
@@ -502,14 +502,14 @@ function ListView({
                 </Badge>
               </td>
               <td className="py-4 px-1">
-                <div className="flex items-center gap-2">
+                <div className="flex min-w-0 items-center gap-2">
                   <div
                     className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-medium text-navy-950"
                     style={{ backgroundColor: `var(--color-${task.assignee.color}-400)` }}
                   >
                     {task.assignee.avatar}
                   </div>
-                  <span className="text-sm text-navy-300">{task.assignee.name}</span>
+                  <span className="whitespace-nowrap text-sm text-navy-300">{task.assignee.name}</span>
                 </div>
               </td>
               <td className="py-4 px-1 text-navy-400 text-sm">
@@ -564,14 +564,14 @@ function TimelineView({
     <div className="relative">
       <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-violet-500/30 to-blue-500/30" />
 
-      <div className="space-y-6 pl-14">
+      <div className="min-w-0 space-y-4 pl-10 sm:space-y-6 sm:pl-14">
         {filteredTasks.map((task, index) => (
           <motion.div
             key={task.id}
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3, delay: index * 0.05 }}
-            className="relative"
+            className="relative min-w-0"
           >
             <div className="absolute left-[-14px] top-1 w-3 h-3 rounded-full border-2 border-navy-900 flex-shrink-0"
               style={{
@@ -584,19 +584,19 @@ function TimelineView({
             />
 
             <Card variant="default" padding="md" className="pl-6">
-              <div className="flex items-start justify-between gap-4">
-                <div className="flex-1">
+              <div className="flex min-w-0 items-start justify-between gap-3">
+                <div className="min-w-0 flex-1">
                   <div className="flex items-center gap-2 mb-1">
                     <span className="font-mono text-xs text-navy-400">{task.id}</span>
-                    <Badge variant={task.status === 'done' ? 'success' : task.status === 'in-progress' ? 'info' : task.status === 'review' ? 'warning' : 'default'} size="sm">
+                    <Badge className="shrink-0 whitespace-nowrap" variant={task.status === 'done' ? 'success' : task.status === 'in-progress' ? 'info' : task.status === 'review' ? 'warning' : 'default'} size="sm">
                       {task.status.replace('-', ' ')}
                     </Badge>
-                    <Badge variant={getPriorityColor(task.priority) as any} size="sm" dot>
+                    <Badge className="shrink-0 whitespace-nowrap" variant={getPriorityColor(task.priority) as any} size="sm" dot>
                       {task.priority}
                     </Badge>
                   </div>
-                  <h5 className="font-medium text-navy-100 mb-1">{task.title}</h5>
-                  <p className="text-navy-400 text-sm mb-3">{task.description}</p>
+                  <h5 className="mb-1 break-words font-medium text-navy-100">{task.title}</h5>
+                  <p className="mb-3 break-words text-sm text-navy-300">{task.description}</p>
 
                   <div className="flex flex-wrap items-center gap-4 text-xs text-navy-500">
                     <span className="flex items-center gap-1">
@@ -619,7 +619,7 @@ function TimelineView({
                   </div>
                 </div>
 
-                <div className="w-24 h-24 flex-shrink-0">
+                <div className="hidden w-24 flex-shrink-0 pt-2 sm:block">
                   <div className="h-2 bg-navy-800 rounded-full overflow-hidden">
                     <motion.div
                       initial={{ width: 0 }}
