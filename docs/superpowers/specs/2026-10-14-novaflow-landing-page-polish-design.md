@@ -1,7 +1,7 @@
 # NovaFlow Landing Page Polish — Design
 
-**Date:** 2026-10-14  
-**Status:** Approved in chat; awaiting written-spec review  
+**Date:** 2026-10-14
+**Status:** Approved in chat; awaiting written-spec review
 **Project:** Existing NovaFlow React/Vite landing page
 
 ## Goal
