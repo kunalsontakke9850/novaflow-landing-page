@@ -33,13 +33,13 @@ export function Navigation() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-navy-950/95 backdrop-blur-md border-b border-white/5' : 'bg-transparent'
+      className={`fixed left-0 right-0 top-0 z-50 border-b border-white/5 backdrop-blur-xl transition-all duration-300 ${
+        isScrolled ? 'bg-navy-950/95 shadow-lg shadow-black/10' : 'bg-navy-950/80'
       }`}
       role="banner"
     >
       <nav className="container" aria-label="Main navigation">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex h-16 items-center justify-between md:h-20">
           {/* Logo */}
           <Link
             to="hero"
@@ -70,8 +70,8 @@ export function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            <div className="flex items-center gap-6">
+          <div className="hidden items-center gap-5 lg:flex xl:gap-8">
+            <div className="flex items-center gap-4 xl:gap-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -79,22 +79,13 @@ export function Navigation() {
                   smooth={true}
                   duration={500}
                   offset={-80}
-                  className="text-navy-300 hover:text-navy-50 text-sm font-medium transition-colors duration-200"
+                  className="text-sm font-medium text-navy-300 transition-colors duration-200 hover:text-navy-50"
                 >
                   {link.label}
                 </Link>
               ))}
             </div>
-            <div className="flex items-center gap-3">
-              <Link
-                to="cta"
-                smooth={true}
-                duration={500}
-                offset={-80}
-                className="btn btn-ghost btn-sm hidden sm:inline-flex"
-              >
-                Demo details
-              </Link>
+            <div className="flex items-center">
               <Link
                 to="product-showcase"
                 smooth={true}
@@ -102,7 +93,7 @@ export function Navigation() {
                 offset={-80}
                 className="btn btn-primary btn-sm"
               >
-                Explore preview
+                View dashboard
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -110,7 +101,7 @@ export function Navigation() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 rounded-lg text-navy-300 hover:text-navy-50 hover:bg-white/5 transition-colors"
+            className="min-h-11 min-w-11 rounded-lg p-2 text-navy-300 transition-colors hover:bg-white/5 hover:text-navy-50 lg:hidden"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-expanded={isMobileMenuOpen}
             aria-controls="mobile-menu"
@@ -125,7 +116,7 @@ export function Navigation() {
           id="mobile-menu"
           aria-hidden={!isMobileMenuOpen}
           inert={!isMobileMenuOpen}
-          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+          className={`overflow-hidden transition-all duration-300 ease-in-out lg:hidden ${
             isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
           }`}
           role="navigation"
@@ -140,23 +131,13 @@ export function Navigation() {
                 duration={500}
                 offset={-80}
                 spy={true}
-                className="block px-2 py-3 text-navy-300 hover:text-navy-50 text-base font-medium rounded-lg transition-colors"
+                className="block rounded-lg px-2 py-3 text-base font-medium text-navy-300 transition-colors hover:text-navy-50"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}
               </Link>
             ))}
-            <div className="pt-4 space-y-3 border-t border-white/5">
-              <Link
-                to="cta"
-                smooth={true}
-                duration={500}
-                offset={-80}
-                className="btn btn-ghost btn-lg w-full justify-start"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Demo details
-              </Link>
+            <div className="space-y-3 border-t border-white/5 pt-4">
               <Link
                 to="product-showcase"
                 smooth={true}
@@ -165,7 +146,7 @@ export function Navigation() {
                 className="btn btn-primary btn-lg w-full"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Explore preview
+                View dashboard
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>

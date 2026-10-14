@@ -33,10 +33,10 @@ describe('Navigation', () => {
     expect(screen.getAllByText('FAQ')).toHaveLength(2);
   });
 
-  it('renders demo navigation links', () => {
+  it('keeps one focused action for exploring the dashboard', () => {
     render(<Navigation />);
-    expect(screen.getAllByText('Demo details')).toHaveLength(2);
-    expect(screen.getAllByText('Explore preview')).toHaveLength(2);
+    expect(screen.getAllByText('View dashboard')).toHaveLength(2);
+    expect(screen.queryByText('Demo details')).not.toBeInTheDocument();
   });
 
   it('shows mobile menu button on small screens', () => {

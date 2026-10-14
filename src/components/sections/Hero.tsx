@@ -5,24 +5,17 @@ import { Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 
 const featureHighlights = [
-  { icon: Zap, label: 'Workflow concept', desc: 'Static automation preview' },
-  { icon: Shield, label: 'UI demonstration', desc: 'Frontend only, no service connected' },
-  { icon: Users, label: 'Sample workspace', desc: 'Uses synthetic preview data' },
-  { icon: BarChart3, label: 'Dashboard mockup', desc: 'Metrics are illustrative' },
-];
-
-const stats = [
-  { value: 'React', label: 'Frontend concept' },
-  { value: '0', label: 'Connected product services' },
-  { value: '4', label: 'Interactive UI patterns' },
-  { value: 'Demo', label: 'Synthetic sample data' },
+  { icon: Zap, label: 'Focused workflows', desc: 'See the next step at a glance' },
+  { icon: CheckCircle, label: 'Clear ownership', desc: 'Keep responsibilities visible' },
+  { icon: Users, label: 'Shared context', desc: 'Bring team activity together' },
+  { icon: BarChart3, label: 'Project clarity', desc: 'Follow progress across work' },
 ];
 
 export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
+      className="relative isolate overflow-hidden pt-20 md:pt-24"
       aria-labelledby="hero-heading"
     >
       {/* Background Effects */}
@@ -39,21 +32,18 @@ export function Hero() {
         }} />
       </div>
 
-      <div className="container relative z-10 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="container relative z-10 pb-20 pt-12 md:pb-24 md:pt-14">
+        <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-14">
           {/* Left Content */}
-          <div className="text-center lg:text-left">
+          <div className="min-w-0 text-center lg:pt-8 lg:text-left">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: 'easeOut' }}
-              className="mb-6 flex flex-wrap justify-center lg:justify-start gap-2"
+              className="mb-6 flex flex-wrap justify-center gap-2 lg:justify-start"
             >
-              <Badge variant="info" dot size="sm" className="animate-slide-down" style={{ animationDelay: '0.1s' }}>
-                Responsive landing page concept
-              </Badge>
-              <Badge variant="success" dot size="sm" className="animate-slide-down" style={{ animationDelay: '0.2s' }}>
-                No backend services connected
+              <Badge variant="info" size="sm" className="px-3 py-1.5">
+                Productivity workspace concept
               </Badge>
             </motion.div>
 
@@ -62,56 +52,38 @@ export function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: 'easeOut', delay: 0.1 }}
-              className="heading-xl text-navy-50 mb-6 text-balance"
+              className="heading-xl mb-6 max-w-2xl text-balance text-navy-50"
             >
-              A workspace concept.{' '}
-              <span className="gradient-text">Designed for flow.</span>
+              A clearer way to move work forward.
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 }}
-              className="text-lg md:text-xl text-navy-300 max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed"
+              className="mx-auto mb-8 max-w-xl text-lg leading-relaxed text-navy-300 md:text-xl lg:mx-0"
             >
-              Explore a fictional productivity workspace through a responsive dashboard preview and interactive page sections. No account or product service is connected.
+              A concept for bringing projects, priorities, and team updates into one calm, focused workspace.
             </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: 'easeOut', delay: 0.3 }}
-              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-16"
+              className="mb-5 flex flex-col items-center justify-center gap-3 sm:flex-row lg:justify-start"
             >
               <Link to="product-showcase" smooth duration={500} offset={-80} className="btn btn-primary btn-lg w-full sm:w-auto">
-                Explore product preview
+                Explore dashboard
                 <ArrowRight className="w-4 h-4" aria-hidden="true" />
               </Link>
               <Link to="features" smooth duration={500} offset={-80} className="btn btn-secondary btn-lg w-full sm:w-auto">
-                Explore page features
+                See what’s inside
               </Link>
             </motion.div>
 
-            {/* Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: 'easeOut', delay: 0.4 }}
-              className="grid grid-cols-2 gap-6 md:gap-8 max-w-xl mx-auto lg:mx-0"
-            >
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="text-3xl md:text-4xl font-bold text-navy-50 gradient-text">{stat.value}</div>
-                  <div className="text-navy-400 text-sm mt-1">{stat.label}</div>
-                </motion.div>
-              ))}
-            </motion.div>
+            <p className="text-sm font-medium text-navy-400">
+              Interactive concept <span aria-hidden="true">·</span> Illustrative dashboard data
+            </p>
           </div>
 
           {/* Right: Dashboard Preview */}
@@ -119,7 +91,7 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
-            className="relative"
+            className="relative min-w-0"
           >
             <DashboardPreview />
           </motion.div>
@@ -130,7 +102,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut', delay: 0.6 }}
-          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
+          className="mt-14 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-4"
           role="list"
           aria-label="Key features"
         >
@@ -140,31 +112,19 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
-              className="card p-5 md:p-6 hover:card-hover transition-all duration-300 group"
+              className="card group p-4 transition-all duration-300 hover:card-hover md:p-5"
               role="listitem"
             >
-              <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-violet-500/20 to-blue-500/20 flex items-center justify-center mb-4 group-hover:from-violet-500/30 group-hover:to-blue-500/30 transition-colors">
+              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-violet-500/10 transition-colors group-hover:bg-violet-500/15">
                 <feature.icon className="w-5 h-5 text-violet-400" aria-hidden="true" />
               </div>
-              <h3 className="font-semibold text-navy-50 mb-1">{feature.label}</h3>
-              <p className="text-navy-400 text-sm">{feature.desc}</p>
+              <h3 className="mb-1 font-semibold text-navy-50">{feature.label}</h3>
+              <p className="text-sm text-navy-400">{feature.desc}</p>
             </motion.div>
           ))}
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
-      <motion.div
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-navy-500 opacity-60 hover:opacity-100 transition-opacity"
-        aria-hidden="true"
-      >
-        <span className="text-xs font-medium uppercase tracking-wider">Scroll to explore</span>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="animate-float">
-          <path d="M12 5v14M19 12l-7 7-7-7" />
-        </svg>
-      </motion.div>
     </section>
   );
 }

@@ -40,6 +40,8 @@ vi.mock('framer-motion', () => ({
     ul: createMotionComponent('ul'),
     li: createMotionComponent('li'),
     tr: createMotionComponent('tr'),
+    path: createMotionComponent('path'),
+    circle: createMotionComponent('circle'),
   },
   AnimatePresence: ({ children }: any) => <>{children}</>,
 }));
