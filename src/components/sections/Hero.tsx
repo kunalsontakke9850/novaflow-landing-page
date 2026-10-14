@@ -285,14 +285,6 @@ function DashboardPreview() {
                           </span>
                         </div>
                       </div>
-                      <div className="hidden h-2 w-16 flex-shrink-0 overflow-hidden rounded-full bg-navy-800 sm:block">
-                        <motion.div
-                          initial={{ width: 0 }}
-                          animate={{ width: `${task.progress}%` }}
-                          transition={{ duration: 0.8, delay: 0.8 }}
-                          className="h-full rounded-full bg-gradient-to-r from-violet-500 to-blue-500"
-                        />
-                      </div>
                     </motion.div>
                   ))}
                 </div>
